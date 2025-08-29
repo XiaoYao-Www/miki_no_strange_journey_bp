@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "miki:clean_pufferfish_recipe"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      { "item": "minecraft:shears" },
+      { "item": "minecraft:pufferfish" }
+    ],
+    "result": {
+      "item": "miki:clean_pufferfish",
+      "count": 1
+    },
+    "unlock": [
+      { "item": "minecraft:pufferfish" }
+    ]
+  }
+}

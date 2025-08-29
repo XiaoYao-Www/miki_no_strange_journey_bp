@@ -1,0 +1,16 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "miki:cooked_clean_pufferfish_recipe"
+    },
+    "tags": ["furnace", "smoker", "campfire", "soul_campfire"],
+    "input": {
+      "item": "miki:clean_pufferfish"
+    },
+    "output": "miki:cooked_pufferfish",
+    "unlock": [
+      { "item": "miki:clean_pufferfish" }
+    ]
+  }
+}
