@@ -2,7 +2,7 @@
   "format_version": "1.8.0",
   "minecraft:spawn_rules": {
     "description": {
-      "identifier": "miki:axe_soldier",
+      "identifier": "miki:bison",
       "population_control": "animal"
     },
     "conditions": [
@@ -10,25 +10,27 @@
         "minecraft:spawns_on_surface": {},
         "minecraft:spawns_on_block_filter": [
           "minecraft:grass_block",
-          "minecraft:grass_path",
-          "minecraft:farmland",
-          "minecraft:cobblestone",
           "minecraft:stone"
         ],
         "minecraft:brightness_filter": {
           "min": 7,
-          "max": 15,
-          "adjust_for_weather": false
+          "max": 15
         },
         "minecraft:weight": {
           "default": 8
         },
         "minecraft:herd": {
-          "min_size":1,
-          "max_size":4
+          "min_size": 3,
+          "max_size": 5
         },
         "minecraft:biome_filter": {
-          "test": "has_biome_tag", "operator":"==", "value": "animal"
+          "any_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "animal"
+            }
+          ]
         }
       }
     ]

@@ -9,6 +9,7 @@
       "item": "minecraft:pufferfish"
     },
     "output": "miki:cooked_pufferfish",
+    "experience": 0.35,
     "unlock": [
       { "item": "minecraft:pufferfish" }
     ]

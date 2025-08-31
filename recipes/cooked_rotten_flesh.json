@@ -9,6 +9,7 @@
       "item": "minecraft:rotten_flesh"
     },
     "output": "miki:cooked_rotten_flesh",
+    "experience": 0.25,
     "unlock": [
       {
         "item": "minecraft:rotten_flesh"

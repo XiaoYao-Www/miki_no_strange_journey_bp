@@ -250,7 +250,7 @@
         "damage": 1
       },
       "minecraft:loot": {
-        "table": "loot_tables/entities/zombie.json"
+        "table": "loot_tables/entities/goblin.json"
       },
       "minecraft:shareables": {
         "items": [
