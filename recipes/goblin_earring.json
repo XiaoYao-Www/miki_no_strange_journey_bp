@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "miki:goblin_earring_recipe"
+    },
+    "tags": ["furnace"],
+    "input": {
+      "item": "miki:goblin_earring"
+    },
+    "output": {
+      "item":"minecraft:gold_nugget",
+      "count": 2
+    },
+    "experience": 0.1,
+    "unlock": [
+      { "item": "miki:goblin_earring" }
+    ]
+  }
+}
