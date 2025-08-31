@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@minecraft/server": "^2.1.0",
+    "@minecraft/server-ui": "^2.0.0",
+    "terser": "^5.39.2",
+    "typescript": "^5.8.3"
+  },
+  "type": "module"
+}

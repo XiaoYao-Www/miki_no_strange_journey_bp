@@ -1,8 +1,8 @@
 {
     "format_version": 2,
     "header": {
-        "name": "More Mobs BP Beta",
-        "description": "Beta v0.0.2",
+        "name": "mikiの奇妙冒險-行為包",
+        "description": "",
         "uuid": "80df0e48-4ea0-44f4-b372-f0d873eeefad",
         "version": [
             1,
@@ -15,6 +15,20 @@
             0
         ]
     },
+    "dependencies": [
+        {
+            "uuid": "b1a5f8e7-9c3d-4e2b-8f1a-2d4e5f6a7b8c",
+            "version": [1, 0, 0]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.1.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.0.0"
+        }
+    ],
     "modules": [
         {
             "description": "Author: miki_come_back",
