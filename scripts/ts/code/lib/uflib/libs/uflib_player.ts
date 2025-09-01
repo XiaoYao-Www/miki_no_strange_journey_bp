@@ -48,4 +48,39 @@ export class UFLib_Player extends UFLib_Entity {
             throw new UFLib_Player.FunError("error", { cause: error });
         }
     }
+
+    /**
+     * 取得手持物品(引用)
+     * @param player 玩家
+     * @returns 物品
+     */
+    static getMainHand(player: Player): ItemStack | undefined{
+        try {
+            // 取得背包容器
+            const backPackContainer: Container | undefined = player.getComponent(EntityComponentTypes.Inventory)?.container;
+            if (backPackContainer === undefined) return undefined;
+            // 取得物品
+            return backPackContainer.getItem(player.selectedSlotIndex);
+        } catch (error: any) {
+            throw new UFLib_Player.FunError("error", { cause: error });
+        }
+    }
+
+    /**
+     * 設定主手物品
+     * @param player 玩家 
+     * @param item 物品
+     * @returns 無
+     */
+    static setMainHand(player: Player, item: ItemStack | undefined){
+        try {
+            // 取得背包容器
+            const backPackContainer: Container | undefined = player.getComponent(EntityComponentTypes.Inventory)?.container;
+            if (backPackContainer === undefined) return undefined;
+            // 設定物品
+            backPackContainer.setItem(player.selectedSlotIndex, item);
+        } catch (error: any) {
+            throw new UFLib_Player.FunError("error", { cause: error });
+        }
+    }
 }

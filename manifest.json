@@ -34,11 +34,14 @@
             "description": "Author: miki_come_back",
             "type": "data",
             "uuid": "5c24347c-c9e8-4899-8c89-4ad0cee9d043",
-            "version": [
-                1,
-                0,
-                0
-            ]
+            "version": [1, 0, 0]
+        },
+        {
+            "type": "script",
+            "language": "javascript",
+            "uuid": "cc367d81-e586-4efc-9e03-1d277f7dd7dc",
+            "version": [1, 0, 0],
+            "entry": "scripts/main.js"
         }
     ]
 }

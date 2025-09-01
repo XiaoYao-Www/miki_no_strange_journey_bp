@@ -5,11 +5,7 @@
     @minecraft/server 2.1.0
     2025/08/22
 */
-
-import { ItemStack, ItemComponentTypes, ItemDurabilityComponent, ItemEnchantableComponent, ItemLockMode, Enchantment, EnchantmentType, ItemDyeableComponent } from "@minecraft/server";
-import { DynamicPropertyData, EnchantmentData } from "../classes/uflib_unity_class.js";
-import { ItemStackData } from "../classes/uflib_item_class.js";
-
+import { ItemStack, ItemComponentTypes, EnchantmentType } from "@minecraft/server";
 /**
  * 物品函式庫
  */
@@ -17,24 +13,23 @@ export class UFLib_Item {
     /**
      * 錯誤輸出
      */
-    protected static FunError = class extends Error {
-        constructor(message?: string, options?: { cause?: unknown }) {
+    static FunError = class extends Error {
+        constructor(message, options) {
             super(message, options);
             this.name = 'GFLib-Item';
         }
     };
-
     /**
      * 將 MC 物品堆資料
      * 轉換成可儲存的純資料類型
-     * 
+     *
      * @param itemStack 物品堆
-     * @returns 
+     * @returns
      */
-    static getItemStackData(itemStack: ItemStack): ItemStackData {
+    static getItemStackData(itemStack) {
         try {
             // 取得基本必須資料
-            let data: ItemStackData = {
+            let data = {
                 amount: itemStack.amount,
                 keepOnDeath: itemStack.keepOnDeath,
                 lockMode: itemStack.lockMode,
@@ -54,7 +49,7 @@ export class UFLib_Item {
             if (itemStack.hasComponent(ItemComponentTypes.Enchantable)) {
                 const enchantableCom = itemStack.getComponent(ItemComponentTypes.Enchantable);
                 data.enchantments = [];
-                enchantableCom?.getEnchantments().forEach((ench: Enchantment) => {
+                enchantableCom?.getEnchantments().forEach((ench) => {
                     data.enchantments?.push({
                         id: ench.type.id,
                         lvl: ench.level,
@@ -73,24 +68,23 @@ export class UFLib_Item {
                 });
             }
             // 取得顏色
-            if(itemStack.hasComponent(ItemComponentTypes.Dyeable)){
+            if (itemStack.hasComponent(ItemComponentTypes.Dyeable)) {
                 const dyeableCom = itemStack.getComponent(ItemComponentTypes.Dyeable);
                 data.color = dyeableCom?.color;
             }
-            
             // 回傳
             return data;
-        } catch (error: any) {
+        }
+        catch (error) {
             throw new UFLib_Item.FunError("error", { cause: error });
         }
     }
-
     /**
      * 將物品純資料轉成物品堆疊
      * @param itemStackData 物品純資料
      * @returns 物品堆疊
      */
-    static data2ItemStack(itemStackData: ItemStackData): ItemStack {
+    static data2ItemStack(itemStackData) {
         /*
             將物品純資料轉成物品堆疊
         */
@@ -104,55 +98,60 @@ export class UFLib_Item {
             itemStack.setCanPlaceOn(itemStackData.canPlaceOn);
             itemStack.setLore(itemStackData.lore);
             // 設定名稱
-            if (itemStackData.nameTag) itemStack.nameTag = itemStackData.nameTag;
+            if (itemStackData.nameTag)
+                itemStack.nameTag = itemStackData.nameTag;
             // 設定耐久
             if (itemStackData.durabilityDamage && itemStack.hasComponent(ItemComponentTypes.Durability)) {
-                const durabilityCom = itemStack.getComponent(ItemComponentTypes.Durability) as ItemDurabilityComponent;
+                const durabilityCom = itemStack.getComponent(ItemComponentTypes.Durability);
                 durabilityCom.damage = itemStackData.durabilityDamage;
             }
             // 設定附魔
             if (itemStackData.enchantments?.length && itemStack.hasComponent(ItemComponentTypes.Enchantable)) {
-                const enchantableCom = itemStack.getComponent(ItemComponentTypes.Enchantable) as ItemEnchantableComponent;
-                itemStackData.enchantments.forEach((enchData: EnchantmentData) => {
-                    const ench: Enchantment = {
+                const enchantableCom = itemStack.getComponent(ItemComponentTypes.Enchantable);
+                itemStackData.enchantments.forEach((enchData) => {
+                    const ench = {
                         type: new EnchantmentType(enchData.id),
                         level: enchData.lvl
                     };
-                    if (enchantableCom.canAddEnchantment(ench)) enchantableCom.addEnchantment(ench);
+                    if (enchantableCom.canAddEnchantment(ench))
+                        enchantableCom.addEnchantment(ench);
                 });
             }
             // 設定動態屬性
-            if (itemStackData.dynamicPropertys?.length) itemStackData.dynamicPropertys.forEach((DPD: DynamicPropertyData) => {
-                itemStack.setDynamicProperty(DPD.id, DPD.value);
-            });
+            if (itemStackData.dynamicPropertys?.length)
+                itemStackData.dynamicPropertys.forEach((DPD) => {
+                    itemStack.setDynamicProperty(DPD.id, DPD.value);
+                });
             // 設定顏色
-            if (itemStackData.color && itemStack.hasComponent(ItemComponentTypes.Dyeable)){
-                const dyeableCom = itemStack.getComponent(ItemComponentTypes.Dyeable) as ItemDyeableComponent;
+            if (itemStackData.color && itemStack.hasComponent(ItemComponentTypes.Dyeable)) {
+                const dyeableCom = itemStack.getComponent(ItemComponentTypes.Dyeable);
                 dyeableCom.color = itemStackData.color;
             }
             // 回傳
             return itemStack;
-        } catch (error: any) {
+        }
+        catch (error) {
             throw new UFLib_Item.FunError("error", { cause: error });
         }
     }
-
     /**
      * 修改物品耐久
      * @param item 物品
      * @param value 耐久變化量
      * @returns 物品副本
      */
-    static changeDurability(item: ItemStack, value: number): ItemStack{
+    static changeDurability(item, value) {
         const newItem = item.clone();
-        if (newItem.hasComponent(ItemComponentTypes.Durability)){
-            const durabilityCom = newItem.getComponent(ItemComponentTypes.Durability) as ItemDurabilityComponent;
+        if (newItem.hasComponent(ItemComponentTypes.Durability)) {
+            const durabilityCom = newItem.getComponent(ItemComponentTypes.Durability);
             const now = durabilityCom.maxDurability - durabilityCom.damage;
-            if((now + value) > durabilityCom.maxDurability){
+            if ((now + value) > durabilityCom.maxDurability) {
                 durabilityCom.damage = 0;
-            }else if((now + value) < 0){
+            }
+            else if ((now + value) < 0) {
                 durabilityCom.damage = durabilityCom.maxDurability;
-            }else{
+            }
+            else {
                 durabilityCom.damage = durabilityCom.maxDurability - (now + value);
             }
         }

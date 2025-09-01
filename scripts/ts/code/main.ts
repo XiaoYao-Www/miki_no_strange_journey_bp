@@ -1,1 +1,1 @@
-import "./core/item_setting.js";
+import "./core/block_interact.js";

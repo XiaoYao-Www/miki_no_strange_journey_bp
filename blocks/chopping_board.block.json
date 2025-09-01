@@ -12,7 +12,7 @@
                 }
             },
             "states": {
-                "chopping_board:item": [1, 0]
+                "chopping_board:item": [0, 1]
             }
         },
 		"components": {
@@ -82,7 +82,7 @@
                 }
             },
             {
-                "condition": "q.block_state('chopping_board:item') == '0' ",
+                "condition": "q.block_state('chopping_board:item') == 0 ",
                 "components": {
                     "minecraft:geometry": {
                         "identifier": "geometry.chopping_board",
@@ -99,7 +99,7 @@
                 }
             },
             {
-                "condition": "q.block_state('chopping_board:item') == '1' ",
+                "condition": "q.block_state('chopping_board:item') == 1 ",
                 "components": {
                     "minecraft:geometry": {
                         "identifier": "geometry.chopping_board",

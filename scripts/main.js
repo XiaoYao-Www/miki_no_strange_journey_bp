@@ -1,0 +1,1 @@
+import "./core/block_interact.js";
