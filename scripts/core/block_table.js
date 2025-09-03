@@ -58,10 +58,16 @@ system.runInterval(() => {
                     // 可鑲嵌
                     if (weapon.getDynamicProperty("socket_hole_0") !== undefined)
                         socketHole0.setItem(new ItemStack(weapon.getDynamicProperty("socket_hole_0")));
+                    else
+                        socketHole0.setItem();
                     if (weapon.getDynamicProperty("socket_hole_1") !== undefined)
                         socketHole1.setItem(new ItemStack(weapon.getDynamicProperty("socket_hole_1")));
+                    else
+                        socketHole1.setItem();
                     if (weapon.getDynamicProperty("socket_hole_2") !== undefined)
                         socketHole2.setItem(new ItemStack(weapon.getDynamicProperty("socket_hole_2")));
+                    else
+                        socketHole2.setItem();
                     inlayWorkbenchTable.setDynamicProperty("using", true);
                 }
                 lastItemMap.set(inlayWorkbenchTable.id, weapon);
