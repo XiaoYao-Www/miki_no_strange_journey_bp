@@ -2,7 +2,7 @@
   "format_version": "1.13.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "miki:nether_golem",
+      "identifier": "miki:end_golem",
       "spawn_category": "monster",
       "is_spawnable": true,
       "is_summonable": true,
@@ -11,8 +11,8 @@
     "component_groups": {
       "mode_switcher": {
         "minecraft:target_nearby_sensor": {
-          "inside_range": 2.0,
-          "outside_range": 3.0,
+          "inside_range": 3.0,
+          "outside_range": 4.0,
           "must_see": true,
           "on_inside_range": {
             "event": "switch_to_melee",
@@ -24,19 +24,29 @@
           }
         }
       },
+      "sonic_mode_switcher": {
+        "minecraft:target_nearby_sensor": {
+          "outside_range": 10.0,
+          "must_see": true,
+          "on_outside_range": {
+            "event": "switch_to_sonic_ranged",
+            "target": "self"
+          }
+        }
+      },
       "ranged_mode": {
         "minecraft:shooter": {
-          "def": "minecraft:small_fireball"
+          "def": "minecraft:shulker_bullet"
         },
         "minecraft:behavior.ranged_attack": {
           "priority": 2,
-          "burst_shots": 3,
-          "burst_interval": 0.1,
+          "burst_shots": 5,
+          "burst_interval": 0.3,
           "charge_charged_trigger": 0,
           "charge_shoot_trigger": 1,
           "attack_interval_min": 1,
-          "attack_interval_max": 3,
-          "attack_radius": 16
+          "attack_interval_max": 2,
+          "attack_radius": 20
         }
       },
       "melee_mode": {
@@ -69,11 +79,11 @@
         "height": 2.9
       },
       "minecraft:loot": {
-        "table": "loot_tables/entities/nether_golem.json"
+        "table": "loot_tables/entities/end_golem.json"
       },
       "minecraft:health": {
-        "value": 100,
-        "max": 100
+        "value": 150,
+        "max": 150
       },
       "minecraft:fire_immune": {},
       "minecraft:movement": {
@@ -96,11 +106,6 @@
       "minecraft:knockback_resistance": {
         "value": 1
       },
-      "minecraft:leashable": {
-        "soft_distance": 4,
-        "hard_distance": 6,
-        "max_distance": 10
-      },
       "minecraft:behavior.move_towards_target": {
         "priority": 2,
         "speed_multiplier": 0.9,
@@ -119,6 +124,21 @@
       "minecraft:behavior.random_look_around": {
         "priority": 8
       },
+			"minecraft:behavior.sonic_boom": {
+				"priority": 8,
+				"duration": 3.0,
+				"speed_multiplier": 1.2,
+				"attack_damage": 1,
+				"attack_range_horizontal": 20,
+				"attack_range_vertical": 20,
+				"attack_cooldown": 3.0,
+				"knockback_vertical_strength": 0.5,
+				"knockback_horizontal_strength": 2.8,
+				"knockback_height_cap": 0.5,
+				"duration_until_attack_sound": 1,
+				"charge_sound": "sonic_charge",
+				"attack_sound": "sonic_boom"
+			},
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 2,
         "must_see": true,
@@ -130,11 +150,6 @@
                   "subject": "other",
                   "test": "is_family",
                   "value": "player"
-                },
-                {
-                  "subject": "other",
-                  "test": "is_family",
-                  "value": "irongolem"
                 }
               ]
             },
@@ -193,6 +208,19 @@
         "add": {
           "component_groups": [
             "ranged_mode"
+          ]
+        }
+      },
+      "switch_to_sonic_ranged": {
+        "remove": {
+          "component_groups": [
+            "melee_mode",
+            "ranged_mode"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "sonic_mode_switcher"
           ]
         }
       },
