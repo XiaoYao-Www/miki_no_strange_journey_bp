@@ -1,0 +1,17 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "miki:cooked_clownfish_recipe"
+    },
+    "tags": ["furnace", "smoker", "campfire", "soul_campfire"],
+    "input": {
+      "item": "minecraft:clownfish"
+    },
+    "output": "miki:cooked_clownfish",
+    "experience": 0.25,
+    "unlock": [
+      { "item": "minecraft:clownfish" }
+    ]
+  }
+}
