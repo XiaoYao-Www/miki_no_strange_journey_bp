@@ -1,0 +1,61 @@
+{
+    "format_version": "1.18.10",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "miki:accessory_settings_table",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+
+        "component_groups": {
+            "set_despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.1,
+                "height": 0.1
+            },
+            "minecraft:health": {
+                "value": 1,
+                "max": 0
+            },
+            "minecraft:fire_immune": {},
+            "minecraft:type_family": {
+                "family": ["table"]
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "deals_damage": false
+                }
+            },
+            "minecraft:nameable": {},
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:inventory": {
+                "container_type": "chest_boat",
+                "inventory_size": 7,
+                "can_be_siphoned_from": false
+            },
+            "minecraft:physics": {
+                "has_gravity": false,
+                "has_collision": false
+            }
+        },
+
+        "events": {
+            "minecraft:entity_spawned": {}
+        }
+    }
+}

@@ -34,10 +34,7 @@
 					"render_method": "alpha_test"
 				}
 			},
-			"minecraft:map_color": "#4b5da3",
-			"minecraft:custom_components": [
-				"miki:inlay_workbench_place"
-			]
+			"minecraft:map_color": "#4b5da3"
 		},
 		"permutations": [
             {
