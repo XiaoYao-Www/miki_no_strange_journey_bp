@@ -1,0 +1,35 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "miki:gold_inlaid_nether_core"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "BBB",
+            "BAB",
+            "BBB"
+        ],
+        "key": {
+            "A": {
+                "item": "miki:nether_core",
+                "data": 0
+            },
+            "B": {
+                "item": "minecraft:gold_block",
+                "data": 0
+            }
+        },
+        "unlock": [
+            {
+              "item": "miki:nether_core"
+            }
+          ],
+        "result": {
+            "item": "miki:gold_inlaid_nether_core",
+            "count": 1
+        }
+    }
+}
