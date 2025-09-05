@@ -137,6 +137,15 @@
       "minecraft:behavior.float": {
         "priority": 0
       },
+      "minecraft:attack": {
+        "damage": {
+          "range_min": 1,
+          "range_max": 3
+        }
+      },
+      "minecraft:behavior.hurt_by_target": {
+				"priority": 1
+			},
       "minecraft:behavior.panic": {
         "priority": 1,
         "speed_multiplier": 1.25
