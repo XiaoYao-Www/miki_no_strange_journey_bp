@@ -12,7 +12,7 @@
                 }
             },
             "states": {
-                "chopping_board:item": [0, 1]
+                "chopping_board:item": [0, 1, 2, 3]
             }
         },
 		"components": {
@@ -99,6 +99,7 @@
                 }
             },
             {
+                // 河豚
                 "condition": "q.block_state('chopping_board:item') == 1 ",
                 "components": {
                     "minecraft:geometry": {
@@ -110,6 +111,42 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "chopping_board_fish_pufferfish_raw",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                // 生野牛肉
+                "condition": "q.block_state('chopping_board:item') == 2 ",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.chopping_board",
+                        "bone_visibility": {
+                            "item": true
+                        }
+                    },
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "chopping_board_raw_bison_meat",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                // 烤野牛肉
+                "condition": "q.block_state('chopping_board:item') == 3 ",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.chopping_board",
+                        "bone_visibility": {
+                            "item": true
+                        }
+                    },
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "chopping_board_cooked_bison_meat",
                             "render_method": "alpha_test"
                         }
                     }

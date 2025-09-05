@@ -4,8 +4,8 @@
 		"description": {
 			"identifier": "miki:cooked_bison_meat",
 			"menu_category": {
-				"category": "nature",
-				"group": "itemGroup.name.crop"
+				"category": "equipment",
+				"group": "itemGroup.name.cookedFood"
 			}
 		},
 		"components": {
