@@ -14,6 +14,15 @@ export function getPlayerDataStore(playerId) {
     if (data === undefined) {
         data = {
             accessory_settings_table: undefined,
+            accessory_slot: {
+                necklace_slot: undefined,
+                ring_slot: undefined,
+                belt_slot: undefined,
+                bracelet_slot: undefined,
+                amulet_slot: undefined,
+                special_slot: undefined,
+                relic_slot: undefined,
+            }
         };
         EntityStore.set(playerId, data);
     }

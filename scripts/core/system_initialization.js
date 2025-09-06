@@ -1,4 +1,10 @@
+/**
+ * 初始化任務定義在這
+ */
 import { DimensionTypes, system, world } from "@minecraft/server";
+/**
+ * 遊戲系統啟動前
+ */
 system.beforeEvents.startup.subscribe(signal => {
     // 註冊自訂組件
     // signal.blockComponentRegistry.registerCustomComponent("miki:inlay_workbench_place", {
@@ -8,6 +14,9 @@ system.beforeEvents.startup.subscribe(signal => {
     //     }
     // });
 });
+/**
+ * 世界載入後
+ */
 world.afterEvents.worldLoad.subscribe(signal => {
     // 清除錯誤滯留實體
     system.runTimeout(() => {

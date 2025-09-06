@@ -1,8 +1,8 @@
-import { BlockPermutation, ItemStack, system, world } from "@minecraft/server";
-import { UFLib } from "../lib/uflib/uflib_core.js";
 /**
  * 砧板系統
  */
+import { BlockPermutation, ItemStack, system, world } from "@minecraft/server";
+import { UFLib } from "../lib/uflib/uflib_core.js";
 world.beforeEvents.playerInteractWithBlock.subscribe(signal => {
     if (signal.isFirstEvent) {
         if (signal.block.typeId == "miki:chopping_board") {

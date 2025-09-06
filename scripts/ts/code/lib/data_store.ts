@@ -13,6 +13,15 @@ const MaintainInterval_m = 10;
 // 生物資料儲存
 export interface PlayerDataStore {
     accessory_settings_table: string | undefined
+    accessory_slot: {
+        necklace_slot: string | undefined,
+        ring_slot: string | undefined,
+        belt_slot: string | undefined,
+        bracelet_slot: string | undefined,
+        amulet_slot: string | undefined,
+        special_slot: string | undefined,
+        relic_slot: string | undefined,
+    }
 }
 
 export interface EnemyDataStore {
@@ -36,6 +45,15 @@ export function getPlayerDataStore(playerId: string): PlayerDataStore {
     if (data === undefined) {
         data = {
             accessory_settings_table: undefined,
+            accessory_slot:{
+                necklace_slot: undefined,
+                ring_slot: undefined,
+                belt_slot: undefined,
+                bracelet_slot: undefined,
+                amulet_slot: undefined,
+                special_slot: undefined,
+                relic_slot: undefined,
+            }
         };
         EntityStore.set(playerId, data);
     }

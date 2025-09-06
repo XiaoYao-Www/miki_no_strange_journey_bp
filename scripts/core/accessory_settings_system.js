@@ -1,4 +1,7 @@
-import { DimensionTypes, EntityComponentTypes, system, world } from "@minecraft/server";
+/**
+ * 飾品系統
+ */
+import { DimensionTypes, EntityComponentTypes, ItemStack, system, world } from "@minecraft/server";
 import { PlayerInterval } from "../lib/player_interval.js";
 import { UFLib } from "../lib/uflib/uflib_core.js";
 import { getPlayerDataStore } from "../lib/data_store.js";
@@ -37,6 +40,30 @@ PlayerInterval.subscribe(player => {
         // 創建容器
         const table = player.dimension.spawnEntity("miki:accessory_settings_table", player.getHeadLocation());
         table.nameTag = "miki:accessory_settings_table";
+        // 取得容器組件
+        const inventoryContainer = table.getComponent(EntityComponentTypes.Inventory)?.container;
+        if (inventoryContainer === undefined) {
+            // 無容器組件時，移除容器
+            table.remove();
+            return;
+        }
+        // 欄位取得
+        const necklaceSlot = inventoryContainer.getSlot(0);
+        const ringSlot = inventoryContainer.getSlot(1);
+        const beltSlot = inventoryContainer.getSlot(2);
+        const braceletSlot = inventoryContainer.getSlot(3);
+        const amuletSlot = inventoryContainer.getSlot(4);
+        const specialSlot = inventoryContainer.getSlot(5);
+        const relicSlot = inventoryContainer.getSlot(6);
+        // 寫入物品
+        necklaceSlot.setItem(player.getDynamicProperty("miki:necklace_slot") ? new ItemStack(player.getDynamicProperty("miki:necklace_slot")) : undefined);
+        ringSlot.setItem(player.getDynamicProperty("miki:ring_slot") ? new ItemStack(player.getDynamicProperty("miki:ring_slot")) : undefined);
+        beltSlot.setItem(player.getDynamicProperty("miki:belt_slot") ? new ItemStack(player.getDynamicProperty("miki:belt_slot")) : undefined);
+        braceletSlot.setItem(player.getDynamicProperty("miki:bracelet_slot") ? new ItemStack(player.getDynamicProperty("miki:bracelet_slot")) : undefined);
+        amuletSlot.setItem(player.getDynamicProperty("miki:amulet_slot") ? new ItemStack(player.getDynamicProperty("miki:amulet_slot")) : undefined);
+        specialSlot.setItem(player.getDynamicProperty("miki:special_slot") ? new ItemStack(player.getDynamicProperty("miki:special_slot")) : undefined);
+        relicSlot.setItem(player.getDynamicProperty("miki:relic_slot") ? new ItemStack(player.getDynamicProperty("miki:relic_slot")) : undefined);
+        // 容器綁定
         playerData.accessory_settings_table = table.id;
     }
     else {
@@ -80,6 +107,30 @@ PlayerInterval.subscribe(player => {
             dropItem(specialSlot, player.dimension.id, player.location);
         if (relicSlot.hasItem() && !relicSlot.hasTag("miki:accessory_relic"))
             dropItem(relicSlot, player.dimension.id, player.location);
+        //// 取得物品
+        const necklaceItem = necklaceSlot.getItem();
+        const ringItem = ringSlot.getItem();
+        const beltItem = beltSlot.getItem();
+        const braceletItem = braceletSlot.getItem();
+        const amuletItem = amuletSlot.getItem();
+        const specialItem = specialSlot.getItem();
+        const relicItem = relicSlot.getItem();
+        //// 寫入玩家資訊
+        player.setDynamicProperty("miki:necklace_slot", necklaceItem?.typeId);
+        player.setDynamicProperty("miki:ring_slot", ringItem?.typeId);
+        player.setDynamicProperty("miki:belt_slot", beltItem?.typeId);
+        player.setDynamicProperty("miki:bracelet_slot", braceletItem?.typeId);
+        player.setDynamicProperty("miki:amulet_slot", amuletItem?.typeId);
+        player.setDynamicProperty("miki:special_slot", specialItem?.typeId);
+        player.setDynamicProperty("miki:relic_slot", relicItem?.typeId);
+        //// 同步到玩家暫存資料
+        playerData.accessory_slot.necklace_slot = necklaceItem?.typeId;
+        playerData.accessory_slot.ring_slot = ringItem?.typeId;
+        playerData.accessory_slot.belt_slot = beltItem?.typeId;
+        playerData.accessory_slot.bracelet_slot = braceletItem?.typeId;
+        playerData.accessory_slot.amulet_slot = amuletItem?.typeId;
+        playerData.accessory_slot.special_slot = specialItem?.typeId;
+        playerData.accessory_slot.relic_slot = relicItem?.typeId;
     }
 });
 /**
@@ -102,5 +153,33 @@ system.runInterval(() => {
             if (!UseList.includes(table.id))
                 table.remove();
         });
+    });
+    /*
+        玩家暫存資料校正
+    */
+    world.getAllPlayers().forEach(player => {
+        const playerData = getPlayerDataStore(player.id);
+        // 飾品欄位校正
+        if (playerData.accessory_slot.necklace_slot !== player.getDynamicProperty("miki:necklace_slot")) {
+            playerData.accessory_slot.necklace_slot = player.getDynamicProperty("miki:necklace_slot");
+        }
+        if (playerData.accessory_slot.ring_slot !== player.getDynamicProperty("miki:ring_slot")) {
+            playerData.accessory_slot.ring_slot = player.getDynamicProperty("miki:ring_slot");
+        }
+        if (playerData.accessory_slot.belt_slot !== player.getDynamicProperty("miki:belt_slot")) {
+            playerData.accessory_slot.belt_slot = player.getDynamicProperty("miki:belt_slot");
+        }
+        if (playerData.accessory_slot.bracelet_slot !== player.getDynamicProperty("miki:bracelet_slot")) {
+            playerData.accessory_slot.bracelet_slot = player.getDynamicProperty("miki:bracelet_slot");
+        }
+        if (playerData.accessory_slot.amulet_slot !== player.getDynamicProperty("miki:amulet_slot")) {
+            playerData.accessory_slot.amulet_slot = player.getDynamicProperty("miki:amulet_slot");
+        }
+        if (playerData.accessory_slot.special_slot !== player.getDynamicProperty("miki:special_slot")) {
+            playerData.accessory_slot.special_slot = player.getDynamicProperty("miki:special_slot");
+        }
+        if (playerData.accessory_slot.relic_slot !== player.getDynamicProperty("miki:relic_slot")) {
+            playerData.accessory_slot.relic_slot = player.getDynamicProperty("miki:relic_slot");
+        }
     });
 }, MaintainInterval_m * 1200);

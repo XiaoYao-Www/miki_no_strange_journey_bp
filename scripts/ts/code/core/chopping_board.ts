@@ -1,9 +1,9 @@
-import { Block, BlockPermutation, BlockStates, BlockStateType, ItemStack, system, world } from "@minecraft/server";
-import { UFLib } from "../lib/uflib/uflib_core.js";
-
 /**
  * 砧板系統
  */
+import { Block, BlockPermutation, BlockStates, BlockStateType, ItemStack, system, world } from "@minecraft/server";
+import { UFLib } from "../lib/uflib/uflib_core.js";
+
 
 world.beforeEvents.playerInteractWithBlock.subscribe(signal => {
     if(signal.isFirstEvent){
