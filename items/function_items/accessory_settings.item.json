@@ -11,7 +11,7 @@
             "minecraft:max_stack_size": 1,
             "minecraft:hand_equipped": false,
             "minecraft:icon": {
-                "texture": "wind_feather"
+                "texture": "accessory_settings"
             }
         }
     }
