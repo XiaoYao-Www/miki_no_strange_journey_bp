@@ -9,17 +9,17 @@ PlayerInterval.subscribe(player => {
     // 設定基本值
     let speed = 10;
     let health = 20;
-    let attack = 2;
+    let attack = 1;
     // 飾品加成
     for (const value of Object.values(playerData.accessory_slot)) {
         if (value === undefined)
             continue;
         const feature = AccessoryFeaturesData[value];
-        if (feature.speed)
+        if (feature.speed !== undefined)
             speed += feature.speed;
-        if (feature.health)
+        if (feature.health !== undefined)
             health += feature.health;
-        if (feature.strength)
+        if (feature.strength !== undefined)
             attack += feature.strength;
     }
     // 載入值
