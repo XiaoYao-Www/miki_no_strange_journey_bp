@@ -1,0 +1,3609 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "minecraft:player",
+            "spawn_category": "creature",
+            "is_spawnable": false,
+            "is_summonable": false
+        },
+
+        "component_groups": {
+            "miki:movement_speed_1": {
+                "minecraft:movement": {
+                    "value": 0.01
+                }
+            },
+            "miki:movement_speed_2": {
+                "minecraft:movement": {
+                    "value": 0.02
+                }
+            },
+            "miki:movement_speed_3": {
+                "minecraft:movement": {
+                    "value": 0.03
+                }
+            },
+            "miki:movement_speed_4": {
+                "minecraft:movement": {
+                    "value": 0.04
+                }
+            },
+            "miki:movement_speed_5": {
+                "minecraft:movement": {
+                    "value": 0.05
+                }
+            },
+            "miki:movement_speed_6": {
+                "minecraft:movement": {
+                    "value": 0.06
+                }
+            },
+            "miki:movement_speed_7": {
+                "minecraft:movement": {
+                    "value": 0.07
+                }
+            },
+            "miki:movement_speed_8": {
+                "minecraft:movement": {
+                    "value": 0.08
+                }
+            },
+            "miki:movement_speed_9": {
+                "minecraft:movement": {
+                    "value": 0.09
+                }
+            },
+            "miki:movement_speed_10": {
+                "minecraft:movement": {
+                    "value": 0.1
+                }
+            },
+            "miki:movement_speed_11": {
+                "minecraft:movement": {
+                    "value": 0.11
+                }
+            },
+            "miki:movement_speed_12": {
+                "minecraft:movement": {
+                    "value": 0.12
+                }
+            },
+            "miki:movement_speed_13": {
+                "minecraft:movement": {
+                    "value": 0.13
+                }
+            },
+            "miki:movement_speed_14": {
+                "minecraft:movement": {
+                    "value": 0.14
+                }
+            },
+            "miki:movement_speed_15": {
+                "minecraft:movement": {
+                    "value": 0.15
+                }
+            },
+            "miki:movement_speed_16": {
+                "minecraft:movement": {
+                    "value": 0.16
+                }
+            },
+            "miki:movement_speed_17": {
+                "minecraft:movement": {
+                    "value": 0.17
+                }
+            },
+            "miki:movement_speed_18": {
+                "minecraft:movement": {
+                    "value": 0.18
+                }
+            },
+            "miki:movement_speed_19": {
+                "minecraft:movement": {
+                    "value": 0.19
+                }
+            },
+            "miki:movement_speed_20": {
+                "minecraft:movement": {
+                    "value": 0.2
+                }
+            },
+            "miki:movement_speed_21": {
+                "minecraft:movement": {
+                    "value": 0.21
+                }
+            },
+            "miki:movement_speed_22": {
+                "minecraft:movement": {
+                    "value": 0.22
+                }
+            },
+            "miki:movement_speed_23": {
+                "minecraft:movement": {
+                    "value": 0.23
+                }
+            },
+            "miki:movement_speed_24": {
+                "minecraft:movement": {
+                    "value": 0.24
+                }
+            },
+            "miki:movement_speed_25": {
+                "minecraft:movement": {
+                    "value": 0.25
+                }
+            },
+            "miki:movement_speed_26": {
+                "minecraft:movement": {
+                    "value": 0.26
+                }
+            },
+            "miki:movement_speed_27": {
+                "minecraft:movement": {
+                    "value": 0.27
+                }
+            },
+            "miki:movement_speed_28": {
+                "minecraft:movement": {
+                    "value": 0.28
+                }
+            },
+            "miki:movement_speed_29": {
+                "minecraft:movement": {
+                    "value": 0.29
+                }
+            },
+            "miki:movement_speed_30": {
+                "minecraft:movement": {
+                    "value": 0.3
+                }
+            },
+            "miki:movement_speed_31": {
+                "minecraft:movement": {
+                    "value": 0.31
+                }
+            },
+            "miki:movement_speed_32": {
+                "minecraft:movement": {
+                    "value": 0.32
+                }
+            },
+            "miki:movement_speed_33": {
+                "minecraft:movement": {
+                    "value": 0.33
+                }
+            },
+            "miki:movement_speed_34": {
+                "minecraft:movement": {
+                    "value": 0.34
+                }
+            },
+            "miki:movement_speed_35": {
+                "minecraft:movement": {
+                    "value": 0.35
+                }
+            },
+            "miki:movement_speed_36": {
+                "minecraft:movement": {
+                    "value": 0.36
+                }
+            },
+            "miki:movement_speed_37": {
+                "minecraft:movement": {
+                    "value": 0.37
+                }
+            },
+            "miki:movement_speed_38": {
+                "minecraft:movement": {
+                    "value": 0.38
+                }
+            },
+            "miki:movement_speed_39": {
+                "minecraft:movement": {
+                    "value": 0.39
+                }
+            },
+            "miki:movement_speed_40": {
+                "minecraft:movement": {
+                    "value": 0.4
+                }
+            },
+            "miki:movement_speed_41": {
+                "minecraft:movement": {
+                    "value": 0.41
+                }
+            },
+            "miki:movement_speed_42": {
+                "minecraft:movement": {
+                    "value": 0.42
+                }
+            },
+            "miki:movement_speed_43": {
+                "minecraft:movement": {
+                    "value": 0.43
+                }
+            },
+            "miki:movement_speed_44": {
+                "minecraft:movement": {
+                    "value": 0.44
+                }
+            },
+            "miki:movement_speed_45": {
+                "minecraft:movement": {
+                    "value": 0.45
+                }
+            },
+            "miki:movement_speed_46": {
+                "minecraft:movement": {
+                    "value": 0.46
+                }
+            },
+            "miki:movement_speed_47": {
+                "minecraft:movement": {
+                    "value": 0.47
+                }
+            },
+            "miki:movement_speed_48": {
+                "minecraft:movement": {
+                    "value": 0.48
+                }
+            },
+            "miki:movement_speed_49": {
+                "minecraft:movement": {
+                    "value": 0.49
+                }
+            },
+            "miki:movement_speed_50": {
+                "minecraft:movement": {
+                    "value": 0.5
+                }
+            },
+            "miki:movement_speed_51": {
+                "minecraft:movement": {
+                    "value": 0.51
+                }
+            },
+            "miki:movement_speed_52": {
+                "minecraft:movement": {
+                    "value": 0.52
+                }
+            },
+            "miki:movement_speed_53": {
+                "minecraft:movement": {
+                    "value": 0.53
+                }
+            },
+            "miki:movement_speed_54": {
+                "minecraft:movement": {
+                    "value": 0.54
+                }
+            },
+            "miki:movement_speed_55": {
+                "minecraft:movement": {
+                    "value": 0.55
+                }
+            },
+            "miki:movement_speed_56": {
+                "minecraft:movement": {
+                    "value": 0.56
+                }
+            },
+            "miki:movement_speed_57": {
+                "minecraft:movement": {
+                    "value": 0.57
+                }
+            },
+            "miki:movement_speed_58": {
+                "minecraft:movement": {
+                    "value": 0.58
+                }
+            },
+            "miki:movement_speed_59": {
+                "minecraft:movement": {
+                    "value": 0.59
+                }
+            },
+            "miki:movement_speed_60": {
+                "minecraft:movement": {
+                    "value": 0.6
+                }
+            },
+            "miki:movement_speed_61": {
+                "minecraft:movement": {
+                    "value": 0.61
+                }
+            },
+            "miki:movement_speed_62": {
+                "minecraft:movement": {
+                    "value": 0.62
+                }
+            },
+            "miki:movement_speed_63": {
+                "minecraft:movement": {
+                    "value": 0.63
+                }
+            },
+            "miki:movement_speed_64": {
+                "minecraft:movement": {
+                    "value": 0.64
+                }
+            },
+            "miki:movement_speed_65": {
+                "minecraft:movement": {
+                    "value": 0.65
+                }
+            },
+            "miki:movement_speed_66": {
+                "minecraft:movement": {
+                    "value": 0.66
+                }
+            },
+            "miki:movement_speed_67": {
+                "minecraft:movement": {
+                    "value": 0.67
+                }
+            },
+            "miki:movement_speed_68": {
+                "minecraft:movement": {
+                    "value": 0.68
+                }
+            },
+            "miki:movement_speed_69": {
+                "minecraft:movement": {
+                    "value": 0.69
+                }
+            },
+            "miki:movement_speed_70": {
+                "minecraft:movement": {
+                    "value": 0.7
+                }
+            },
+            "miki:movement_speed_71": {
+                "minecraft:movement": {
+                    "value": 0.71
+                }
+            },
+            "miki:movement_speed_72": {
+                "minecraft:movement": {
+                    "value": 0.72
+                }
+            },
+            "miki:movement_speed_73": {
+                "minecraft:movement": {
+                    "value": 0.73
+                }
+            },
+            "miki:movement_speed_74": {
+                "minecraft:movement": {
+                    "value": 0.74
+                }
+            },
+            "miki:movement_speed_75": {
+                "minecraft:movement": {
+                    "value": 0.75
+                }
+            },
+            "miki:movement_speed_76": {
+                "minecraft:movement": {
+                    "value": 0.76
+                }
+            },
+            "miki:movement_speed_77": {
+                "minecraft:movement": {
+                    "value": 0.77
+                }
+            },
+            "miki:movement_speed_78": {
+                "minecraft:movement": {
+                    "value": 0.78
+                }
+            },
+            "miki:movement_speed_79": {
+                "minecraft:movement": {
+                    "value": 0.79
+                }
+            },
+            "miki:movement_speed_80": {
+                "minecraft:movement": {
+                    "value": 0.8
+                }
+            },
+            "miki:movement_speed_81": {
+                "minecraft:movement": {
+                    "value": 0.81
+                }
+            },
+            "miki:movement_speed_82": {
+                "minecraft:movement": {
+                    "value": 0.82
+                }
+            },
+            "miki:movement_speed_83": {
+                "minecraft:movement": {
+                    "value": 0.83
+                }
+            },
+            "miki:movement_speed_84": {
+                "minecraft:movement": {
+                    "value": 0.84
+                }
+            },
+            "miki:movement_speed_85": {
+                "minecraft:movement": {
+                    "value": 0.85
+                }
+            },
+            "miki:movement_speed_86": {
+                "minecraft:movement": {
+                    "value": 0.86
+                }
+            },
+            "miki:movement_speed_87": {
+                "minecraft:movement": {
+                    "value": 0.87
+                }
+            },
+            "miki:movement_speed_88": {
+                "minecraft:movement": {
+                    "value": 0.88
+                }
+            },
+            "miki:movement_speed_89": {
+                "minecraft:movement": {
+                    "value": 0.89
+                }
+            },
+            "miki:movement_speed_90": {
+                "minecraft:movement": {
+                    "value": 0.9
+                }
+            },
+            "miki:movement_speed_91": {
+                "minecraft:movement": {
+                    "value": 0.91
+                }
+            },
+            "miki:movement_speed_92": {
+                "minecraft:movement": {
+                    "value": 0.92
+                }
+            },
+            "miki:movement_speed_93": {
+                "minecraft:movement": {
+                    "value": 0.93
+                }
+            },
+            "miki:movement_speed_94": {
+                "minecraft:movement": {
+                    "value": 0.94
+                }
+            },
+            "miki:movement_speed_95": {
+                "minecraft:movement": {
+                    "value": 0.95
+                }
+            },
+            "miki:movement_speed_96": {
+                "minecraft:movement": {
+                    "value": 0.96
+                }
+            },
+            "miki:movement_speed_97": {
+                "minecraft:movement": {
+                    "value": 0.97
+                }
+            },
+            "miki:movement_speed_98": {
+                "minecraft:movement": {
+                    "value": 0.98
+                }
+            },
+            "miki:movement_speed_99": {
+                "minecraft:movement": {
+                    "value": 0.99
+                }
+            },
+            "miki:movement_speed_100": {
+                "minecraft:movement": {
+                    "value": 1.0
+                }
+            },
+            "miki:health_1": {
+                "minecraft:health": {
+                    "value": 1,
+                    "max": 1
+                }
+            },
+            "miki:health_2": {
+                "minecraft:health": {
+                    "value": 2,
+                    "max": 2
+                }
+            },
+            "miki:health_3": {
+                "minecraft:health": {
+                    "value": 3,
+                    "max": 3
+                }
+            },
+            "miki:health_4": {
+                "minecraft:health": {
+                    "value": 4,
+                    "max": 4
+                }
+            },
+            "miki:health_5": {
+                "minecraft:health": {
+                    "value": 5,
+                    "max": 5
+                }
+            },
+            "miki:health_6": {
+                "minecraft:health": {
+                    "value": 6,
+                    "max": 6
+                }
+            },
+            "miki:health_7": {
+                "minecraft:health": {
+                    "value": 7,
+                    "max": 7
+                }
+            },
+            "miki:health_8": {
+                "minecraft:health": {
+                    "value": 8,
+                    "max": 8
+                }
+            },
+            "miki:health_9": {
+                "minecraft:health": {
+                    "value": 9,
+                    "max": 9
+                }
+            },
+            "miki:health_10": {
+                "minecraft:health": {
+                    "value": 10,
+                    "max": 10
+                }
+            },
+            "miki:health_11": {
+                "minecraft:health": {
+                    "value": 11,
+                    "max": 11
+                }
+            },
+            "miki:health_12": {
+                "minecraft:health": {
+                    "value": 12,
+                    "max": 12
+                }
+            },
+            "miki:health_13": {
+                "minecraft:health": {
+                    "value": 13,
+                    "max": 13
+                }
+            },
+            "miki:health_14": {
+                "minecraft:health": {
+                    "value": 14,
+                    "max": 14
+                }
+            },
+            "miki:health_15": {
+                "minecraft:health": {
+                    "value": 15,
+                    "max": 15
+                }
+            },
+            "miki:health_16": {
+                "minecraft:health": {
+                    "value": 16,
+                    "max": 16
+                }
+            },
+            "miki:health_17": {
+                "minecraft:health": {
+                    "value": 17,
+                    "max": 17
+                }
+            },
+            "miki:health_18": {
+                "minecraft:health": {
+                    "value": 18,
+                    "max": 18
+                }
+            },
+            "miki:health_19": {
+                "minecraft:health": {
+                    "value": 19,
+                    "max": 19
+                }
+            },
+            "miki:health_20": {
+                "minecraft:health": {
+                    "value": 20,
+                    "max": 20
+                }
+            },
+            "miki:health_21": {
+                "minecraft:health": {
+                    "value": 21,
+                    "max": 21
+                }
+            },
+            "miki:health_22": {
+                "minecraft:health": {
+                    "value": 22,
+                    "max": 22
+                }
+            },
+            "miki:health_23": {
+                "minecraft:health": {
+                    "value": 23,
+                    "max": 23
+                }
+            },
+            "miki:health_24": {
+                "minecraft:health": {
+                    "value": 24,
+                    "max": 24
+                }
+            },
+            "miki:health_25": {
+                "minecraft:health": {
+                    "value": 25,
+                    "max": 25
+                }
+            },
+            "miki:health_26": {
+                "minecraft:health": {
+                    "value": 26,
+                    "max": 26
+                }
+            },
+            "miki:health_27": {
+                "minecraft:health": {
+                    "value": 27,
+                    "max": 27
+                }
+            },
+            "miki:health_28": {
+                "minecraft:health": {
+                    "value": 28,
+                    "max": 28
+                }
+            },
+            "miki:health_29": {
+                "minecraft:health": {
+                    "value": 29,
+                    "max": 29
+                }
+            },
+            "miki:health_30": {
+                "minecraft:health": {
+                    "value": 30,
+                    "max": 30
+                }
+            },
+            "miki:health_31": {
+                "minecraft:health": {
+                    "value": 31,
+                    "max": 31
+                }
+            },
+            "miki:health_32": {
+                "minecraft:health": {
+                    "value": 32,
+                    "max": 32
+                }
+            },
+            "miki:health_33": {
+                "minecraft:health": {
+                    "value": 33,
+                    "max": 33
+                }
+            },
+            "miki:health_34": {
+                "minecraft:health": {
+                    "value": 34,
+                    "max": 34
+                }
+            },
+            "miki:health_35": {
+                "minecraft:health": {
+                    "value": 35,
+                    "max": 35
+                }
+            },
+            "miki:health_36": {
+                "minecraft:health": {
+                    "value": 36,
+                    "max": 36
+                }
+            },
+            "miki:health_37": {
+                "minecraft:health": {
+                    "value": 37,
+                    "max": 37
+                }
+            },
+            "miki:health_38": {
+                "minecraft:health": {
+                    "value": 38,
+                    "max": 38
+                }
+            },
+            "miki:health_39": {
+                "minecraft:health": {
+                    "value": 39,
+                    "max": 39
+                }
+            },
+            "miki:health_40": {
+                "minecraft:health": {
+                    "value": 40,
+                    "max": 40
+                }
+            },
+            "miki:health_41": {
+                "minecraft:health": {
+                    "value": 41,
+                    "max": 41
+                }
+            },
+            "miki:health_42": {
+                "minecraft:health": {
+                    "value": 42,
+                    "max": 42
+                }
+            },
+            "miki:health_43": {
+                "minecraft:health": {
+                    "value": 43,
+                    "max": 43
+                }
+            },
+            "miki:health_44": {
+                "minecraft:health": {
+                    "value": 44,
+                    "max": 44
+                }
+            },
+            "miki:health_45": {
+                "minecraft:health": {
+                    "value": 45,
+                    "max": 45
+                }
+            },
+            "miki:health_46": {
+                "minecraft:health": {
+                    "value": 46,
+                    "max": 46
+                }
+            },
+            "miki:health_47": {
+                "minecraft:health": {
+                    "value": 47,
+                    "max": 47
+                }
+            },
+            "miki:health_48": {
+                "minecraft:health": {
+                    "value": 48,
+                    "max": 48
+                }
+            },
+            "miki:health_49": {
+                "minecraft:health": {
+                    "value": 49,
+                    "max": 49
+                }
+            },
+            "miki:health_50": {
+                "minecraft:health": {
+                    "value": 50,
+                    "max": 50
+                }
+            },
+            "miki:health_51": {
+                "minecraft:health": {
+                    "value": 51,
+                    "max": 51
+                }
+            },
+            "miki:health_52": {
+                "minecraft:health": {
+                    "value": 52,
+                    "max": 52
+                }
+            },
+            "miki:health_53": {
+                "minecraft:health": {
+                    "value": 53,
+                    "max": 53
+                }
+            },
+            "miki:health_54": {
+                "minecraft:health": {
+                    "value": 54,
+                    "max": 54
+                }
+            },
+            "miki:health_55": {
+                "minecraft:health": {
+                    "value": 55,
+                    "max": 55
+                }
+            },
+            "miki:health_56": {
+                "minecraft:health": {
+                    "value": 56,
+                    "max": 56
+                }
+            },
+            "miki:health_57": {
+                "minecraft:health": {
+                    "value": 57,
+                    "max": 57
+                }
+            },
+            "miki:health_58": {
+                "minecraft:health": {
+                    "value": 58,
+                    "max": 58
+                }
+            },
+            "miki:health_59": {
+                "minecraft:health": {
+                    "value": 59,
+                    "max": 59
+                }
+            },
+            "miki:health_60": {
+                "minecraft:health": {
+                    "value": 60,
+                    "max": 60
+                }
+            },
+            "miki:health_61": {
+                "minecraft:health": {
+                    "value": 61,
+                    "max": 61
+                }
+            },
+            "miki:health_62": {
+                "minecraft:health": {
+                    "value": 62,
+                    "max": 62
+                }
+            },
+            "miki:health_63": {
+                "minecraft:health": {
+                    "value": 63,
+                    "max": 63
+                }
+            },
+            "miki:health_64": {
+                "minecraft:health": {
+                    "value": 64,
+                    "max": 64
+                }
+            },
+            "miki:health_65": {
+                "minecraft:health": {
+                    "value": 65,
+                    "max": 65
+                }
+            },
+            "miki:health_66": {
+                "minecraft:health": {
+                    "value": 66,
+                    "max": 66
+                }
+            },
+            "miki:health_67": {
+                "minecraft:health": {
+                    "value": 67,
+                    "max": 67
+                }
+            },
+            "miki:health_68": {
+                "minecraft:health": {
+                    "value": 68,
+                    "max": 68
+                }
+            },
+            "miki:health_69": {
+                "minecraft:health": {
+                    "value": 69,
+                    "max": 69
+                }
+            },
+            "miki:health_70": {
+                "minecraft:health": {
+                    "value": 70,
+                    "max": 70
+                }
+            },
+            "miki:health_71": {
+                "minecraft:health": {
+                    "value": 71,
+                    "max": 71
+                }
+            },
+            "miki:health_72": {
+                "minecraft:health": {
+                    "value": 72,
+                    "max": 72
+                }
+            },
+            "miki:health_73": {
+                "minecraft:health": {
+                    "value": 73,
+                    "max": 73
+                }
+            },
+            "miki:health_74": {
+                "minecraft:health": {
+                    "value": 74,
+                    "max": 74
+                }
+            },
+            "miki:health_75": {
+                "minecraft:health": {
+                    "value": 75,
+                    "max": 75
+                }
+            },
+            "miki:health_76": {
+                "minecraft:health": {
+                    "value": 76,
+                    "max": 76
+                }
+            },
+            "miki:health_77": {
+                "minecraft:health": {
+                    "value": 77,
+                    "max": 77
+                }
+            },
+            "miki:health_78": {
+                "minecraft:health": {
+                    "value": 78,
+                    "max": 78
+                }
+            },
+            "miki:health_79": {
+                "minecraft:health": {
+                    "value": 79,
+                    "max": 79
+                }
+            },
+            "miki:health_80": {
+                "minecraft:health": {
+                    "value": 80,
+                    "max": 80
+                }
+            },
+            "miki:health_81": {
+                "minecraft:health": {
+                    "value": 81,
+                    "max": 81
+                }
+            },
+            "miki:health_82": {
+                "minecraft:health": {
+                    "value": 82,
+                    "max": 82
+                }
+            },
+            "miki:health_83": {
+                "minecraft:health": {
+                    "value": 83,
+                    "max": 83
+                }
+            },
+            "miki:health_84": {
+                "minecraft:health": {
+                    "value": 84,
+                    "max": 84
+                }
+            },
+            "miki:health_85": {
+                "minecraft:health": {
+                    "value": 85,
+                    "max": 85
+                }
+            },
+            "miki:health_86": {
+                "minecraft:health": {
+                    "value": 86,
+                    "max": 86
+                }
+            },
+            "miki:health_87": {
+                "minecraft:health": {
+                    "value": 87,
+                    "max": 87
+                }
+            },
+            "miki:health_88": {
+                "minecraft:health": {
+                    "value": 88,
+                    "max": 88
+                }
+            },
+            "miki:health_89": {
+                "minecraft:health": {
+                    "value": 89,
+                    "max": 89
+                }
+            },
+            "miki:health_90": {
+                "minecraft:health": {
+                    "value": 90,
+                    "max": 90
+                }
+            },
+            "miki:health_91": {
+                "minecraft:health": {
+                    "value": 91,
+                    "max": 91
+                }
+            },
+            "miki:health_92": {
+                "minecraft:health": {
+                    "value": 92,
+                    "max": 92
+                }
+            },
+            "miki:health_93": {
+                "minecraft:health": {
+                    "value": 93,
+                    "max": 93
+                }
+            },
+            "miki:health_94": {
+                "minecraft:health": {
+                    "value": 94,
+                    "max": 94
+                }
+            },
+            "miki:health_95": {
+                "minecraft:health": {
+                    "value": 95,
+                    "max": 95
+                }
+            },
+            "miki:health_96": {
+                "minecraft:health": {
+                    "value": 96,
+                    "max": 96
+                }
+            },
+            "miki:health_97": {
+                "minecraft:health": {
+                    "value": 97,
+                    "max": 97
+                }
+            },
+            "miki:health_98": {
+                "minecraft:health": {
+                    "value": 98,
+                    "max": 98
+                }
+            },
+            "miki:health_99": {
+                "minecraft:health": {
+                    "value": 99,
+                    "max": 99
+                }
+            },
+            "miki:health_100": {
+                "minecraft:health": {
+                    "value": 100,
+                    "max": 100
+                }
+            },
+            "miki:attack_damage_1": {
+                "minecraft:attack": {
+                    "damage": 1
+                }
+            },
+            "miki:attack_damage_2": {
+                "minecraft:attack": {
+                    "damage": 2
+                }
+            },
+            "miki:attack_damage_3": {
+                "minecraft:attack": {
+                    "damage": 3
+                }
+            },
+            "miki:attack_damage_4": {
+                "minecraft:attack": {
+                    "damage": 4
+                }
+            },
+            "miki:attack_damage_5": {
+                "minecraft:attack": {
+                    "damage": 5
+                }
+            },
+            "miki:attack_damage_6": {
+                "minecraft:attack": {
+                    "damage": 6
+                }
+            },
+            "miki:attack_damage_7": {
+                "minecraft:attack": {
+                    "damage": 7
+                }
+            },
+            "miki:attack_damage_8": {
+                "minecraft:attack": {
+                    "damage": 8
+                }
+            },
+            "miki:attack_damage_9": {
+                "minecraft:attack": {
+                    "damage": 9
+                }
+            },
+            "miki:attack_damage_10": {
+                "minecraft:attack": {
+                    "damage": 10
+                }
+            },
+            "miki:attack_damage_11": {
+                "minecraft:attack": {
+                    "damage": 11
+                }
+            },
+            "miki:attack_damage_12": {
+                "minecraft:attack": {
+                    "damage": 12
+                }
+            },
+            "miki:attack_damage_13": {
+                "minecraft:attack": {
+                    "damage": 13
+                }
+            },
+            "miki:attack_damage_14": {
+                "minecraft:attack": {
+                    "damage": 14
+                }
+            },
+            "miki:attack_damage_15": {
+                "minecraft:attack": {
+                    "damage": 15
+                }
+            },
+            "miki:attack_damage_16": {
+                "minecraft:attack": {
+                    "damage": 16
+                }
+            },
+            "miki:attack_damage_17": {
+                "minecraft:attack": {
+                    "damage": 17
+                }
+            },
+            "miki:attack_damage_18": {
+                "minecraft:attack": {
+                    "damage": 18
+                }
+            },
+            "miki:attack_damage_19": {
+                "minecraft:attack": {
+                    "damage": 19
+                }
+            },
+            "miki:attack_damage_20": {
+                "minecraft:attack": {
+                    "damage": 20
+                }
+            },
+            "miki:attack_damage_21": {
+                "minecraft:attack": {
+                    "damage": 21
+                }
+            },
+            "miki:attack_damage_22": {
+                "minecraft:attack": {
+                    "damage": 22
+                }
+            },
+            "miki:attack_damage_23": {
+                "minecraft:attack": {
+                    "damage": 23
+                }
+            },
+            "miki:attack_damage_24": {
+                "minecraft:attack": {
+                    "damage": 24
+                }
+            },
+            "miki:attack_damage_25": {
+                "minecraft:attack": {
+                    "damage": 25
+                }
+            },
+            "miki:attack_damage_26": {
+                "minecraft:attack": {
+                    "damage": 26
+                }
+            },
+            "miki:attack_damage_27": {
+                "minecraft:attack": {
+                    "damage": 27
+                }
+            },
+            "miki:attack_damage_28": {
+                "minecraft:attack": {
+                    "damage": 28
+                }
+            },
+            "miki:attack_damage_29": {
+                "minecraft:attack": {
+                    "damage": 29
+                }
+            },
+            "miki:attack_damage_30": {
+                "minecraft:attack": {
+                    "damage": 30
+                }
+            },
+            "miki:attack_damage_31": {
+                "minecraft:attack": {
+                    "damage": 31
+                }
+            },
+            "miki:attack_damage_32": {
+                "minecraft:attack": {
+                    "damage": 32
+                }
+            },
+            "miki:attack_damage_33": {
+                "minecraft:attack": {
+                    "damage": 33
+                }
+            },
+            "miki:attack_damage_34": {
+                "minecraft:attack": {
+                    "damage": 34
+                }
+            },
+            "miki:attack_damage_35": {
+                "minecraft:attack": {
+                    "damage": 35
+                }
+            },
+            "miki:attack_damage_36": {
+                "minecraft:attack": {
+                    "damage": 36
+                }
+            },
+            "miki:attack_damage_37": {
+                "minecraft:attack": {
+                    "damage": 37
+                }
+            },
+            "miki:attack_damage_38": {
+                "minecraft:attack": {
+                    "damage": 38
+                }
+            },
+            "miki:attack_damage_39": {
+                "minecraft:attack": {
+                    "damage": 39
+                }
+            },
+            "miki:attack_damage_40": {
+                "minecraft:attack": {
+                    "damage": 40
+                }
+            },
+            "miki:attack_damage_41": {
+                "minecraft:attack": {
+                    "damage": 41
+                }
+            },
+            "miki:attack_damage_42": {
+                "minecraft:attack": {
+                    "damage": 42
+                }
+            },
+            "miki:attack_damage_43": {
+                "minecraft:attack": {
+                    "damage": 43
+                }
+            },
+            "miki:attack_damage_44": {
+                "minecraft:attack": {
+                    "damage": 44
+                }
+            },
+            "miki:attack_damage_45": {
+                "minecraft:attack": {
+                    "damage": 45
+                }
+            },
+            "miki:attack_damage_46": {
+                "minecraft:attack": {
+                    "damage": 46
+                }
+            },
+            "miki:attack_damage_47": {
+                "minecraft:attack": {
+                    "damage": 47
+                }
+            },
+            "miki:attack_damage_48": {
+                "minecraft:attack": {
+                    "damage": 48
+                }
+            },
+            "miki:attack_damage_49": {
+                "minecraft:attack": {
+                    "damage": 49
+                }
+            },
+            "miki:attack_damage_50": {
+                "minecraft:attack": {
+                    "damage": 50
+                }
+            },
+            "miki:attack_damage_51": {
+                "minecraft:attack": {
+                    "damage": 51
+                }
+            },
+            "miki:attack_damage_52": {
+                "minecraft:attack": {
+                    "damage": 52
+                }
+            },
+            "miki:attack_damage_53": {
+                "minecraft:attack": {
+                    "damage": 53
+                }
+            },
+            "miki:attack_damage_54": {
+                "minecraft:attack": {
+                    "damage": 54
+                }
+            },
+            "miki:attack_damage_55": {
+                "minecraft:attack": {
+                    "damage": 55
+                }
+            },
+            "miki:attack_damage_56": {
+                "minecraft:attack": {
+                    "damage": 56
+                }
+            },
+            "miki:attack_damage_57": {
+                "minecraft:attack": {
+                    "damage": 57
+                }
+            },
+            "miki:attack_damage_58": {
+                "minecraft:attack": {
+                    "damage": 58
+                }
+            },
+            "miki:attack_damage_59": {
+                "minecraft:attack": {
+                    "damage": 59
+                }
+            },
+            "miki:attack_damage_60": {
+                "minecraft:attack": {
+                    "damage": 60
+                }
+            },
+            "miki:attack_damage_61": {
+                "minecraft:attack": {
+                    "damage": 61
+                }
+            },
+            "miki:attack_damage_62": {
+                "minecraft:attack": {
+                    "damage": 62
+                }
+            },
+            "miki:attack_damage_63": {
+                "minecraft:attack": {
+                    "damage": 63
+                }
+            },
+            "miki:attack_damage_64": {
+                "minecraft:attack": {
+                    "damage": 64
+                }
+            },
+            "miki:attack_damage_65": {
+                "minecraft:attack": {
+                    "damage": 65
+                }
+            },
+            "miki:attack_damage_66": {
+                "minecraft:attack": {
+                    "damage": 66
+                }
+            },
+            "miki:attack_damage_67": {
+                "minecraft:attack": {
+                    "damage": 67
+                }
+            },
+            "miki:attack_damage_68": {
+                "minecraft:attack": {
+                    "damage": 68
+                }
+            },
+            "miki:attack_damage_69": {
+                "minecraft:attack": {
+                    "damage": 69
+                }
+            },
+            "miki:attack_damage_70": {
+                "minecraft:attack": {
+                    "damage": 70
+                }
+            },
+            "miki:attack_damage_71": {
+                "minecraft:attack": {
+                    "damage": 71
+                }
+            },
+            "miki:attack_damage_72": {
+                "minecraft:attack": {
+                    "damage": 72
+                }
+            },
+            "miki:attack_damage_73": {
+                "minecraft:attack": {
+                    "damage": 73
+                }
+            },
+            "miki:attack_damage_74": {
+                "minecraft:attack": {
+                    "damage": 74
+                }
+            },
+            "miki:attack_damage_75": {
+                "minecraft:attack": {
+                    "damage": 75
+                }
+            },
+            "miki:attack_damage_76": {
+                "minecraft:attack": {
+                    "damage": 76
+                }
+            },
+            "miki:attack_damage_77": {
+                "minecraft:attack": {
+                    "damage": 77
+                }
+            },
+            "miki:attack_damage_78": {
+                "minecraft:attack": {
+                    "damage": 78
+                }
+            },
+            "miki:attack_damage_79": {
+                "minecraft:attack": {
+                    "damage": 79
+                }
+            },
+            "miki:attack_damage_80": {
+                "minecraft:attack": {
+                    "damage": 80
+                }
+            },
+            "miki:attack_damage_81": {
+                "minecraft:attack": {
+                    "damage": 81
+                }
+            },
+            "miki:attack_damage_82": {
+                "minecraft:attack": {
+                    "damage": 82
+                }
+            },
+            "miki:attack_damage_83": {
+                "minecraft:attack": {
+                    "damage": 83
+                }
+            },
+            "miki:attack_damage_84": {
+                "minecraft:attack": {
+                    "damage": 84
+                }
+            },
+            "miki:attack_damage_85": {
+                "minecraft:attack": {
+                    "damage": 85
+                }
+            },
+            "miki:attack_damage_86": {
+                "minecraft:attack": {
+                    "damage": 86
+                }
+            },
+            "miki:attack_damage_87": {
+                "minecraft:attack": {
+                    "damage": 87
+                }
+            },
+            "miki:attack_damage_88": {
+                "minecraft:attack": {
+                    "damage": 88
+                }
+            },
+            "miki:attack_damage_89": {
+                "minecraft:attack": {
+                    "damage": 89
+                }
+            },
+            "miki:attack_damage_90": {
+                "minecraft:attack": {
+                    "damage": 90
+                }
+            },
+            "miki:attack_damage_91": {
+                "minecraft:attack": {
+                    "damage": 91
+                }
+            },
+            "miki:attack_damage_92": {
+                "minecraft:attack": {
+                    "damage": 92
+                }
+            },
+            "miki:attack_damage_93": {
+                "minecraft:attack": {
+                    "damage": 93
+                }
+            },
+            "miki:attack_damage_94": {
+                "minecraft:attack": {
+                    "damage": 94
+                }
+            },
+            "miki:attack_damage_95": {
+                "minecraft:attack": {
+                    "damage": 95
+                }
+            },
+            "miki:attack_damage_96": {
+                "minecraft:attack": {
+                    "damage": 96
+                }
+            },
+            "miki:attack_damage_97": {
+                "minecraft:attack": {
+                    "damage": 97
+                }
+            },
+            "miki:attack_damage_98": {
+                "minecraft:attack": {
+                    "damage": 98
+                }
+            },
+            "miki:attack_damage_99": {
+                "minecraft:attack": {
+                    "damage": 99
+                }
+            },
+            "miki:attack_damage_100": {
+                "minecraft:attack": {
+                    "damage": 100
+                }
+            },
+            "minecraft:add_raid_omen": {
+                "minecraft:spell_effects": {
+                    "add_effects": [
+                        {
+                            "effect": "raid_omen",
+                            "duration": 30,
+                            "display_on_screen_animation": true
+                        }
+                    ],
+                    "remove_effects": "bad_omen"
+                },
+                "minecraft:timer": {
+                    "time": [0.0, 0.0],
+                    "looping": false,
+                    "time_down_event": {
+                        "event": "minecraft:clear_add_raid_omen",
+                        "target": "self"
+                    }
+                }
+            },
+            "minecraft:clear_raid_omen_spell_effect": {
+                "minecraft:spell_effects": {}
+            },
+            "minecraft:raid_trigger": {
+                "minecraft:raid_trigger": {
+                    "triggered_event": {
+                        "event": "minecraft:remove_raid_trigger",
+                        "target": "self"
+                    }
+                }
+            }
+        },
+
+        "components": {
+            "minecraft:experience_reward": {
+                "on_death": "Math.Min(query.player_level * 7, 100)"
+            },
+            "minecraft:type_family": {
+                "family": ["player"]
+            },
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.8
+            },
+            "minecraft:can_climb": {},
+            "minecraft:movement": {
+                "value": 0.1
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        "cause": "lava",
+                        "damage_per_tick": 4
+                    }
+                ]
+            },
+            "minecraft:attack": {
+                "damage": 1
+            },
+            "minecraft:exhaustion_values": {
+                "heal": 6,
+                "jump": 0.05,
+                "sprint_jump": 0.2,
+                "mine": 0.005,
+                "attack": 0.1,
+                "damage": 0.1,
+                "walk": 0.0,
+                "sprint": 0.1,
+                "swim": 0.01
+            },
+            "minecraft:player.saturation": {
+                "value": 5,
+                "max": 20
+            },
+            "minecraft:player.exhaustion": {
+                "value": 0,
+                "max": 20
+            },
+            "minecraft:player.level": {
+                "value": 0,
+                "max": 24791
+            },
+            "minecraft:player.experience": {
+                "value": 0,
+                "max": 1
+            },
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": -1,
+                "inhale_time": 3.75,
+                "generates_bubbles": false
+            },
+            "minecraft:nameable": {
+                "always_show": true,
+                "allow_name_tag_renaming": false
+            },
+            "minecraft:physics": {
+                "push_towards_closest_space": true
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:insomnia": {
+                "days_until_insomnia": 3
+            },
+            "minecraft:rideable": {
+                "seat_count": 2,
+                "family_types": ["parrot_tame"],
+                "pull_in_entities": true,
+                "seats": [
+                    {
+                        "position": [0.4, -0.2, -0.1],
+                        "min_rider_count": 0,
+                        "max_rider_count": 0,
+                        "lock_rider_rotation": 0
+                    },
+                    {
+                        "position": [-0.4, -0.2, -0.1],
+                        "min_rider_count": 1,
+                        "max_rider_count": 2,
+                        "lock_rider_rotation": 0
+                    }
+                ]
+            },
+            "minecraft:conditional_bandwidth_optimization": {},
+            "minecraft:block_climber": {},
+            "minecraft:environment_sensor": {
+                "triggers": {
+                    "filters": {
+                        "all_of": [
+                            {
+                                "test": "has_mob_effect",
+                                "subject": "self",
+                                "value": "bad_omen"
+                            },
+                            {
+                                "test": "is_in_village",
+                                "subject": "self",
+                                "value": true
+                            }
+                        ]
+                    },
+                    "event": "minecraft:gain_raid_omen"
+                }
+            }
+        },
+
+        "events": {
+            "miki:remove_custom_value": {
+                "remove": {
+                    "component_groups": [
+                        "miki:movement_speed_1",
+                        "miki:movement_speed_2",
+                        "miki:movement_speed_3",
+                        "miki:movement_speed_4",
+                        "miki:movement_speed_5",
+                        "miki:movement_speed_6",
+                        "miki:movement_speed_7",
+                        "miki:movement_speed_8",
+                        "miki:movement_speed_9",
+                        "miki:movement_speed_10",
+                        "miki:movement_speed_11",
+                        "miki:movement_speed_12",
+                        "miki:movement_speed_13",
+                        "miki:movement_speed_14",
+                        "miki:movement_speed_15",
+                        "miki:movement_speed_16",
+                        "miki:movement_speed_17",
+                        "miki:movement_speed_18",
+                        "miki:movement_speed_19",
+                        "miki:movement_speed_20",
+                        "miki:movement_speed_21",
+                        "miki:movement_speed_22",
+                        "miki:movement_speed_23",
+                        "miki:movement_speed_24",
+                        "miki:movement_speed_25",
+                        "miki:movement_speed_26",
+                        "miki:movement_speed_27",
+                        "miki:movement_speed_28",
+                        "miki:movement_speed_29",
+                        "miki:movement_speed_30",
+                        "miki:movement_speed_31",
+                        "miki:movement_speed_32",
+                        "miki:movement_speed_33",
+                        "miki:movement_speed_34",
+                        "miki:movement_speed_35",
+                        "miki:movement_speed_36",
+                        "miki:movement_speed_37",
+                        "miki:movement_speed_38",
+                        "miki:movement_speed_39",
+                        "miki:movement_speed_40",
+                        "miki:movement_speed_41",
+                        "miki:movement_speed_42",
+                        "miki:movement_speed_43",
+                        "miki:movement_speed_44",
+                        "miki:movement_speed_45",
+                        "miki:movement_speed_46",
+                        "miki:movement_speed_47",
+                        "miki:movement_speed_48",
+                        "miki:movement_speed_49",
+                        "miki:movement_speed_50",
+                        "miki:movement_speed_51",
+                        "miki:movement_speed_52",
+                        "miki:movement_speed_53",
+                        "miki:movement_speed_54",
+                        "miki:movement_speed_55",
+                        "miki:movement_speed_56",
+                        "miki:movement_speed_57",
+                        "miki:movement_speed_58",
+                        "miki:movement_speed_59",
+                        "miki:movement_speed_60",
+                        "miki:movement_speed_61",
+                        "miki:movement_speed_62",
+                        "miki:movement_speed_63",
+                        "miki:movement_speed_64",
+                        "miki:movement_speed_65",
+                        "miki:movement_speed_66",
+                        "miki:movement_speed_67",
+                        "miki:movement_speed_68",
+                        "miki:movement_speed_69",
+                        "miki:movement_speed_70",
+                        "miki:movement_speed_71",
+                        "miki:movement_speed_72",
+                        "miki:movement_speed_73",
+                        "miki:movement_speed_74",
+                        "miki:movement_speed_75",
+                        "miki:movement_speed_76",
+                        "miki:movement_speed_77",
+                        "miki:movement_speed_78",
+                        "miki:movement_speed_79",
+                        "miki:movement_speed_80",
+                        "miki:movement_speed_81",
+                        "miki:movement_speed_82",
+                        "miki:movement_speed_83",
+                        "miki:movement_speed_84",
+                        "miki:movement_speed_85",
+                        "miki:movement_speed_86",
+                        "miki:movement_speed_87",
+                        "miki:movement_speed_88",
+                        "miki:movement_speed_89",
+                        "miki:movement_speed_90",
+                        "miki:movement_speed_91",
+                        "miki:movement_speed_92",
+                        "miki:movement_speed_93",
+                        "miki:movement_speed_94",
+                        "miki:movement_speed_95",
+                        "miki:movement_speed_96",
+                        "miki:movement_speed_97",
+                        "miki:movement_speed_98",
+                        "miki:movement_speed_99",
+                        "miki:movement_speed_100",
+
+                        "miki:health_1",
+                        "miki:health_2",
+                        "miki:health_3",
+                        "miki:health_4",
+                        "miki:health_5",
+                        "miki:health_6",
+                        "miki:health_7",
+                        "miki:health_8",
+                        "miki:health_9",
+                        "miki:health_10",
+                        "miki:health_11",
+                        "miki:health_12",
+                        "miki:health_13",
+                        "miki:health_14",
+                        "miki:health_15",
+                        "miki:health_16",
+                        "miki:health_17",
+                        "miki:health_18",
+                        "miki:health_19",
+                        "miki:health_20",
+                        "miki:health_21",
+                        "miki:health_22",
+                        "miki:health_23",
+                        "miki:health_24",
+                        "miki:health_25",
+                        "miki:health_26",
+                        "miki:health_27",
+                        "miki:health_28",
+                        "miki:health_29",
+                        "miki:health_30",
+                        "miki:health_31",
+                        "miki:health_32",
+                        "miki:health_33",
+                        "miki:health_34",
+                        "miki:health_35",
+                        "miki:health_36",
+                        "miki:health_37",
+                        "miki:health_38",
+                        "miki:health_39",
+                        "miki:health_40",
+                        "miki:health_41",
+                        "miki:health_42",
+                        "miki:health_43",
+                        "miki:health_44",
+                        "miki:health_45",
+                        "miki:health_46",
+                        "miki:health_47",
+                        "miki:health_48",
+                        "miki:health_49",
+                        "miki:health_50",
+                        "miki:health_51",
+                        "miki:health_52",
+                        "miki:health_53",
+                        "miki:health_54",
+                        "miki:health_55",
+                        "miki:health_56",
+                        "miki:health_57",
+                        "miki:health_58",
+                        "miki:health_59",
+                        "miki:health_60",
+                        "miki:health_61",
+                        "miki:health_62",
+                        "miki:health_63",
+                        "miki:health_64",
+                        "miki:health_65",
+                        "miki:health_66",
+                        "miki:health_67",
+                        "miki:health_68",
+                        "miki:health_69",
+                        "miki:health_70",
+                        "miki:health_71",
+                        "miki:health_72",
+                        "miki:health_73",
+                        "miki:health_74",
+                        "miki:health_75",
+                        "miki:health_76",
+                        "miki:health_77",
+                        "miki:health_78",
+                        "miki:health_79",
+                        "miki:health_80",
+                        "miki:health_81",
+                        "miki:health_82",
+                        "miki:health_83",
+                        "miki:health_84",
+                        "miki:health_85",
+                        "miki:health_86",
+                        "miki:health_87",
+                        "miki:health_88",
+                        "miki:health_89",
+                        "miki:health_90",
+                        "miki:health_91",
+                        "miki:health_92",
+                        "miki:health_93",
+                        "miki:health_94",
+                        "miki:health_95",
+                        "miki:health_96",
+                        "miki:health_97",
+                        "miki:health_98",
+                        "miki:health_99",
+                        "miki:health_100",
+
+                        "miki:attack_damage_1",
+                        "miki:attack_damage_2",
+                        "miki:attack_damage_3",
+                        "miki:attack_damage_4",
+                        "miki:attack_damage_5",
+                        "miki:attack_damage_6",
+                        "miki:attack_damage_7",
+                        "miki:attack_damage_8",
+                        "miki:attack_damage_9",
+                        "miki:attack_damage_10",
+                        "miki:attack_damage_11",
+                        "miki:attack_damage_12",
+                        "miki:attack_damage_13",
+                        "miki:attack_damage_14",
+                        "miki:attack_damage_15",
+                        "miki:attack_damage_16",
+                        "miki:attack_damage_17",
+                        "miki:attack_damage_18",
+                        "miki:attack_damage_19",
+                        "miki:attack_damage_20",
+                        "miki:attack_damage_21",
+                        "miki:attack_damage_22",
+                        "miki:attack_damage_23",
+                        "miki:attack_damage_24",
+                        "miki:attack_damage_25",
+                        "miki:attack_damage_26",
+                        "miki:attack_damage_27",
+                        "miki:attack_damage_28",
+                        "miki:attack_damage_29",
+                        "miki:attack_damage_30",
+                        "miki:attack_damage_31",
+                        "miki:attack_damage_32",
+                        "miki:attack_damage_33",
+                        "miki:attack_damage_34",
+                        "miki:attack_damage_35",
+                        "miki:attack_damage_36",
+                        "miki:attack_damage_37",
+                        "miki:attack_damage_38",
+                        "miki:attack_damage_39",
+                        "miki:attack_damage_40",
+                        "miki:attack_damage_41",
+                        "miki:attack_damage_42",
+                        "miki:attack_damage_43",
+                        "miki:attack_damage_44",
+                        "miki:attack_damage_45",
+                        "miki:attack_damage_46",
+                        "miki:attack_damage_47",
+                        "miki:attack_damage_48",
+                        "miki:attack_damage_49",
+                        "miki:attack_damage_50",
+                        "miki:attack_damage_51",
+                        "miki:attack_damage_52",
+                        "miki:attack_damage_53",
+                        "miki:attack_damage_54",
+                        "miki:attack_damage_55",
+                        "miki:attack_damage_56",
+                        "miki:attack_damage_57",
+                        "miki:attack_damage_58",
+                        "miki:attack_damage_59",
+                        "miki:attack_damage_60",
+                        "miki:attack_damage_61",
+                        "miki:attack_damage_62",
+                        "miki:attack_damage_63",
+                        "miki:attack_damage_64",
+                        "miki:attack_damage_65",
+                        "miki:attack_damage_66",
+                        "miki:attack_damage_67",
+                        "miki:attack_damage_68",
+                        "miki:attack_damage_69",
+                        "miki:attack_damage_70",
+                        "miki:attack_damage_71",
+                        "miki:attack_damage_72",
+                        "miki:attack_damage_73",
+                        "miki:attack_damage_74",
+                        "miki:attack_damage_75",
+                        "miki:attack_damage_76",
+                        "miki:attack_damage_77",
+                        "miki:attack_damage_78",
+                        "miki:attack_damage_79",
+                        "miki:attack_damage_80",
+                        "miki:attack_damage_81",
+                        "miki:attack_damage_82",
+                        "miki:attack_damage_83",
+                        "miki:attack_damage_84",
+                        "miki:attack_damage_85",
+                        "miki:attack_damage_86",
+                        "miki:attack_damage_87",
+                        "miki:attack_damage_88",
+                        "miki:attack_damage_89",
+                        "miki:attack_damage_90",
+                        "miki:attack_damage_91",
+                        "miki:attack_damage_92",
+                        "miki:attack_damage_93",
+                        "miki:attack_damage_94",
+                        "miki:attack_damage_95",
+                        "miki:attack_damage_96",
+                        "miki:attack_damage_97",
+                        "miki:attack_damage_98",
+                        "miki:attack_damage_99",
+                        "miki:attack_damage_100"
+                    ]
+                }
+            },
+            "miki:add_movement_speed_1": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_1"]
+                }
+            },
+            "miki:add_movement_speed_2": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_2"]
+                }
+            },
+            "miki:add_movement_speed_3": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_3"]
+                }
+            },
+            "miki:add_movement_speed_4": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_4"]
+                }
+            },
+            "miki:add_movement_speed_5": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_5"]
+                }
+            },
+            "miki:add_movement_speed_6": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_6"]
+                }
+            },
+            "miki:add_movement_speed_7": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_7"]
+                }
+            },
+            "miki:add_movement_speed_8": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_8"]
+                }
+            },
+            "miki:add_movement_speed_9": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_9"]
+                }
+            },
+            "miki:add_movement_speed_10": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_10"]
+                }
+            },
+            "miki:add_movement_speed_11": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_11"]
+                }
+            },
+            "miki:add_movement_speed_12": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_12"]
+                }
+            },
+            "miki:add_movement_speed_13": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_13"]
+                }
+            },
+            "miki:add_movement_speed_14": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_14"]
+                }
+            },
+            "miki:add_movement_speed_15": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_15"]
+                }
+            },
+            "miki:add_movement_speed_16": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_16"]
+                }
+            },
+            "miki:add_movement_speed_17": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_17"]
+                }
+            },
+            "miki:add_movement_speed_18": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_18"]
+                }
+            },
+            "miki:add_movement_speed_19": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_19"]
+                }
+            },
+            "miki:add_movement_speed_20": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_20"]
+                }
+            },
+            "miki:add_movement_speed_21": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_21"]
+                }
+            },
+            "miki:add_movement_speed_22": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_22"]
+                }
+            },
+            "miki:add_movement_speed_23": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_23"]
+                }
+            },
+            "miki:add_movement_speed_24": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_24"]
+                }
+            },
+            "miki:add_movement_speed_25": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_25"]
+                }
+            },
+            "miki:add_movement_speed_26": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_26"]
+                }
+            },
+            "miki:add_movement_speed_27": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_27"]
+                }
+            },
+            "miki:add_movement_speed_28": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_28"]
+                }
+            },
+            "miki:add_movement_speed_29": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_29"]
+                }
+            },
+            "miki:add_movement_speed_30": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_30"]
+                }
+            },
+            "miki:add_movement_speed_31": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_31"]
+                }
+            },
+            "miki:add_movement_speed_32": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_32"]
+                }
+            },
+            "miki:add_movement_speed_33": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_33"]
+                }
+            },
+            "miki:add_movement_speed_34": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_34"]
+                }
+            },
+            "miki:add_movement_speed_35": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_35"]
+                }
+            },
+            "miki:add_movement_speed_36": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_36"]
+                }
+            },
+            "miki:add_movement_speed_37": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_37"]
+                }
+            },
+            "miki:add_movement_speed_38": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_38"]
+                }
+            },
+            "miki:add_movement_speed_39": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_39"]
+                }
+            },
+            "miki:add_movement_speed_40": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_40"]
+                }
+            },
+            "miki:add_movement_speed_41": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_41"]
+                }
+            },
+            "miki:add_movement_speed_42": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_42"]
+                }
+            },
+            "miki:add_movement_speed_43": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_43"]
+                }
+            },
+            "miki:add_movement_speed_44": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_44"]
+                }
+            },
+            "miki:add_movement_speed_45": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_45"]
+                }
+            },
+            "miki:add_movement_speed_46": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_46"]
+                }
+            },
+            "miki:add_movement_speed_47": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_47"]
+                }
+            },
+            "miki:add_movement_speed_48": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_48"]
+                }
+            },
+            "miki:add_movement_speed_49": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_49"]
+                }
+            },
+            "miki:add_movement_speed_50": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_50"]
+                }
+            },
+            "miki:add_movement_speed_51": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_51"]
+                }
+            },
+            "miki:add_movement_speed_52": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_52"]
+                }
+            },
+            "miki:add_movement_speed_53": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_53"]
+                }
+            },
+            "miki:add_movement_speed_54": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_54"]
+                }
+            },
+            "miki:add_movement_speed_55": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_55"]
+                }
+            },
+            "miki:add_movement_speed_56": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_56"]
+                }
+            },
+            "miki:add_movement_speed_57": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_57"]
+                }
+            },
+            "miki:add_movement_speed_58": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_58"]
+                }
+            },
+            "miki:add_movement_speed_59": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_59"]
+                }
+            },
+            "miki:add_movement_speed_60": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_60"]
+                }
+            },
+            "miki:add_movement_speed_61": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_61"]
+                }
+            },
+            "miki:add_movement_speed_62": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_62"]
+                }
+            },
+            "miki:add_movement_speed_63": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_63"]
+                }
+            },
+            "miki:add_movement_speed_64": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_64"]
+                }
+            },
+            "miki:add_movement_speed_65": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_65"]
+                }
+            },
+            "miki:add_movement_speed_66": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_66"]
+                }
+            },
+            "miki:add_movement_speed_67": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_67"]
+                }
+            },
+            "miki:add_movement_speed_68": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_68"]
+                }
+            },
+            "miki:add_movement_speed_69": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_69"]
+                }
+            },
+            "miki:add_movement_speed_70": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_70"]
+                }
+            },
+            "miki:add_movement_speed_71": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_71"]
+                }
+            },
+            "miki:add_movement_speed_72": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_72"]
+                }
+            },
+            "miki:add_movement_speed_73": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_73"]
+                }
+            },
+            "miki:add_movement_speed_74": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_74"]
+                }
+            },
+            "miki:add_movement_speed_75": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_75"]
+                }
+            },
+            "miki:add_movement_speed_76": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_76"]
+                }
+            },
+            "miki:add_movement_speed_77": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_77"]
+                }
+            },
+            "miki:add_movement_speed_78": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_78"]
+                }
+            },
+            "miki:add_movement_speed_79": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_79"]
+                }
+            },
+            "miki:add_movement_speed_80": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_80"]
+                }
+            },
+            "miki:add_movement_speed_81": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_81"]
+                }
+            },
+            "miki:add_movement_speed_82": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_82"]
+                }
+            },
+            "miki:add_movement_speed_83": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_83"]
+                }
+            },
+            "miki:add_movement_speed_84": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_84"]
+                }
+            },
+            "miki:add_movement_speed_85": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_85"]
+                }
+            },
+            "miki:add_movement_speed_86": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_86"]
+                }
+            },
+            "miki:add_movement_speed_87": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_87"]
+                }
+            },
+            "miki:add_movement_speed_88": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_88"]
+                }
+            },
+            "miki:add_movement_speed_89": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_89"]
+                }
+            },
+            "miki:add_movement_speed_90": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_90"]
+                }
+            },
+            "miki:add_movement_speed_91": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_91"]
+                }
+            },
+            "miki:add_movement_speed_92": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_92"]
+                }
+            },
+            "miki:add_movement_speed_93": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_93"]
+                }
+            },
+            "miki:add_movement_speed_94": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_94"]
+                }
+            },
+            "miki:add_movement_speed_95": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_95"]
+                }
+            },
+            "miki:add_movement_speed_96": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_96"]
+                }
+            },
+            "miki:add_movement_speed_97": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_97"]
+                }
+            },
+            "miki:add_movement_speed_98": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_98"]
+                }
+            },
+            "miki:add_movement_speed_99": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_99"]
+                }
+            },
+            "miki:add_movement_speed_100": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_100"]
+                }
+            },
+            "miki:add_health_1": {
+                "add": {
+                    "component_groups": ["miki:health_1"]
+                }
+            },
+            "miki:add_health_1": {
+                "add": {
+                    "component_groups": ["miki:health_1"]
+                }
+            },
+            "miki:add_health_2": {
+                "add": {
+                    "component_groups": ["miki:health_2"]
+                }
+            },
+            "miki:add_health_3": {
+                "add": {
+                    "component_groups": ["miki:health_3"]
+                }
+            },
+            "miki:add_health_4": {
+                "add": {
+                    "component_groups": ["miki:health_4"]
+                }
+            },
+            "miki:add_health_5": {
+                "add": {
+                    "component_groups": ["miki:health_5"]
+                }
+            },
+            "miki:add_health_6": {
+                "add": {
+                    "component_groups": ["miki:health_6"]
+                }
+            },
+            "miki:add_health_7": {
+                "add": {
+                    "component_groups": ["miki:health_7"]
+                }
+            },
+            "miki:add_health_8": {
+                "add": {
+                    "component_groups": ["miki:health_8"]
+                }
+            },
+            "miki:add_health_9": {
+                "add": {
+                    "component_groups": ["miki:health_9"]
+                }
+            },
+            "miki:add_health_10": {
+                "add": {
+                    "component_groups": ["miki:health_10"]
+                }
+            },
+            "miki:add_health_11": {
+                "add": {
+                    "component_groups": ["miki:health_11"]
+                }
+            },
+            "miki:add_health_12": {
+                "add": {
+                    "component_groups": ["miki:health_12"]
+                }
+            },
+            "miki:add_health_13": {
+                "add": {
+                    "component_groups": ["miki:health_13"]
+                }
+            },
+            "miki:add_health_14": {
+                "add": {
+                    "component_groups": ["miki:health_14"]
+                }
+            },
+            "miki:add_health_15": {
+                "add": {
+                    "component_groups": ["miki:health_15"]
+                }
+            },
+            "miki:add_health_16": {
+                "add": {
+                    "component_groups": ["miki:health_16"]
+                }
+            },
+            "miki:add_health_17": {
+                "add": {
+                    "component_groups": ["miki:health_17"]
+                }
+            },
+            "miki:add_health_18": {
+                "add": {
+                    "component_groups": ["miki:health_18"]
+                }
+            },
+            "miki:add_health_19": {
+                "add": {
+                    "component_groups": ["miki:health_19"]
+                }
+            },
+            "miki:add_health_20": {
+                "add": {
+                    "component_groups": ["miki:health_20"]
+                }
+            },
+            "miki:add_health_21": {
+                "add": {
+                    "component_groups": ["miki:health_21"]
+                }
+            },
+            "miki:add_health_22": {
+                "add": {
+                    "component_groups": ["miki:health_22"]
+                }
+            },
+            "miki:add_health_23": {
+                "add": {
+                    "component_groups": ["miki:health_23"]
+                }
+            },
+            "miki:add_health_24": {
+                "add": {
+                    "component_groups": ["miki:health_24"]
+                }
+            },
+            "miki:add_health_25": {
+                "add": {
+                    "component_groups": ["miki:health_25"]
+                }
+            },
+            "miki:add_health_26": {
+                "add": {
+                    "component_groups": ["miki:health_26"]
+                }
+            },
+            "miki:add_health_27": {
+                "add": {
+                    "component_groups": ["miki:health_27"]
+                }
+            },
+            "miki:add_health_28": {
+                "add": {
+                    "component_groups": ["miki:health_28"]
+                }
+            },
+            "miki:add_health_29": {
+                "add": {
+                    "component_groups": ["miki:health_29"]
+                }
+            },
+            "miki:add_health_30": {
+                "add": {
+                    "component_groups": ["miki:health_30"]
+                }
+            },
+            "miki:add_health_31": {
+                "add": {
+                    "component_groups": ["miki:health_31"]
+                }
+            },
+            "miki:add_health_32": {
+                "add": {
+                    "component_groups": ["miki:health_32"]
+                }
+            },
+            "miki:add_health_33": {
+                "add": {
+                    "component_groups": ["miki:health_33"]
+                }
+            },
+            "miki:add_health_34": {
+                "add": {
+                    "component_groups": ["miki:health_34"]
+                }
+            },
+            "miki:add_health_35": {
+                "add": {
+                    "component_groups": ["miki:health_35"]
+                }
+            },
+            "miki:add_health_36": {
+                "add": {
+                    "component_groups": ["miki:health_36"]
+                }
+            },
+            "miki:add_health_37": {
+                "add": {
+                    "component_groups": ["miki:health_37"]
+                }
+            },
+            "miki:add_health_38": {
+                "add": {
+                    "component_groups": ["miki:health_38"]
+                }
+            },
+            "miki:add_health_39": {
+                "add": {
+                    "component_groups": ["miki:health_39"]
+                }
+            },
+            "miki:add_health_40": {
+                "add": {
+                    "component_groups": ["miki:health_40"]
+                }
+            },
+            "miki:add_health_41": {
+                "add": {
+                    "component_groups": ["miki:health_41"]
+                }
+            },
+            "miki:add_health_42": {
+                "add": {
+                    "component_groups": ["miki:health_42"]
+                }
+            },
+            "miki:add_health_43": {
+                "add": {
+                    "component_groups": ["miki:health_43"]
+                }
+            },
+            "miki:add_health_44": {
+                "add": {
+                    "component_groups": ["miki:health_44"]
+                }
+            },
+            "miki:add_health_45": {
+                "add": {
+                    "component_groups": ["miki:health_45"]
+                }
+            },
+            "miki:add_health_46": {
+                "add": {
+                    "component_groups": ["miki:health_46"]
+                }
+            },
+            "miki:add_health_47": {
+                "add": {
+                    "component_groups": ["miki:health_47"]
+                }
+            },
+            "miki:add_health_48": {
+                "add": {
+                    "component_groups": ["miki:health_48"]
+                }
+            },
+            "miki:add_health_49": {
+                "add": {
+                    "component_groups": ["miki:health_49"]
+                }
+            },
+            "miki:add_health_50": {
+                "add": {
+                    "component_groups": ["miki:health_50"]
+                }
+            },
+            "miki:add_health_51": {
+                "add": {
+                    "component_groups": ["miki:health_51"]
+                }
+            },
+            "miki:add_health_52": {
+                "add": {
+                    "component_groups": ["miki:health_52"]
+                }
+            },
+            "miki:add_health_53": {
+                "add": {
+                    "component_groups": ["miki:health_53"]
+                }
+            },
+            "miki:add_health_54": {
+                "add": {
+                    "component_groups": ["miki:health_54"]
+                }
+            },
+            "miki:add_health_55": {
+                "add": {
+                    "component_groups": ["miki:health_55"]
+                }
+            },
+            "miki:add_health_56": {
+                "add": {
+                    "component_groups": ["miki:health_56"]
+                }
+            },
+            "miki:add_health_57": {
+                "add": {
+                    "component_groups": ["miki:health_57"]
+                }
+            },
+            "miki:add_health_58": {
+                "add": {
+                    "component_groups": ["miki:health_58"]
+                }
+            },
+            "miki:add_health_59": {
+                "add": {
+                    "component_groups": ["miki:health_59"]
+                }
+            },
+            "miki:add_health_60": {
+                "add": {
+                    "component_groups": ["miki:health_60"]
+                }
+            },
+            "miki:add_health_61": {
+                "add": {
+                    "component_groups": ["miki:health_61"]
+                }
+            },
+            "miki:add_health_62": {
+                "add": {
+                    "component_groups": ["miki:health_62"]
+                }
+            },
+            "miki:add_health_63": {
+                "add": {
+                    "component_groups": ["miki:health_63"]
+                }
+            },
+            "miki:add_health_64": {
+                "add": {
+                    "component_groups": ["miki:health_64"]
+                }
+            },
+            "miki:add_health_65": {
+                "add": {
+                    "component_groups": ["miki:health_65"]
+                }
+            },
+            "miki:add_health_66": {
+                "add": {
+                    "component_groups": ["miki:health_66"]
+                }
+            },
+            "miki:add_health_67": {
+                "add": {
+                    "component_groups": ["miki:health_67"]
+                }
+            },
+            "miki:add_health_68": {
+                "add": {
+                    "component_groups": ["miki:health_68"]
+                }
+            },
+            "miki:add_health_69": {
+                "add": {
+                    "component_groups": ["miki:health_69"]
+                }
+            },
+            "miki:add_health_70": {
+                "add": {
+                    "component_groups": ["miki:health_70"]
+                }
+            },
+            "miki:add_health_71": {
+                "add": {
+                    "component_groups": ["miki:health_71"]
+                }
+            },
+            "miki:add_health_72": {
+                "add": {
+                    "component_groups": ["miki:health_72"]
+                }
+            },
+            "miki:add_health_73": {
+                "add": {
+                    "component_groups": ["miki:health_73"]
+                }
+            },
+            "miki:add_health_74": {
+                "add": {
+                    "component_groups": ["miki:health_74"]
+                }
+            },
+            "miki:add_health_75": {
+                "add": {
+                    "component_groups": ["miki:health_75"]
+                }
+            },
+            "miki:add_health_76": {
+                "add": {
+                    "component_groups": ["miki:health_76"]
+                }
+            },
+            "miki:add_health_77": {
+                "add": {
+                    "component_groups": ["miki:health_77"]
+                }
+            },
+            "miki:add_health_78": {
+                "add": {
+                    "component_groups": ["miki:health_78"]
+                }
+            },
+            "miki:add_health_79": {
+                "add": {
+                    "component_groups": ["miki:health_79"]
+                }
+            },
+            "miki:add_health_80": {
+                "add": {
+                    "component_groups": ["miki:health_80"]
+                }
+            },
+            "miki:add_health_81": {
+                "add": {
+                    "component_groups": ["miki:health_81"]
+                }
+            },
+            "miki:add_health_82": {
+                "add": {
+                    "component_groups": ["miki:health_82"]
+                }
+            },
+            "miki:add_health_83": {
+                "add": {
+                    "component_groups": ["miki:health_83"]
+                }
+            },
+            "miki:add_health_84": {
+                "add": {
+                    "component_groups": ["miki:health_84"]
+                }
+            },
+            "miki:add_health_85": {
+                "add": {
+                    "component_groups": ["miki:health_85"]
+                }
+            },
+            "miki:add_health_86": {
+                "add": {
+                    "component_groups": ["miki:health_86"]
+                }
+            },
+            "miki:add_health_87": {
+                "add": {
+                    "component_groups": ["miki:health_87"]
+                }
+            },
+            "miki:add_health_88": {
+                "add": {
+                    "component_groups": ["miki:health_88"]
+                }
+            },
+            "miki:add_health_89": {
+                "add": {
+                    "component_groups": ["miki:health_89"]
+                }
+            },
+            "miki:add_health_90": {
+                "add": {
+                    "component_groups": ["miki:health_90"]
+                }
+            },
+            "miki:add_health_91": {
+                "add": {
+                    "component_groups": ["miki:health_91"]
+                }
+            },
+            "miki:add_health_92": {
+                "add": {
+                    "component_groups": ["miki:health_92"]
+                }
+            },
+            "miki:add_health_93": {
+                "add": {
+                    "component_groups": ["miki:health_93"]
+                }
+            },
+            "miki:add_health_94": {
+                "add": {
+                    "component_groups": ["miki:health_94"]
+                }
+            },
+            "miki:add_health_95": {
+                "add": {
+                    "component_groups": ["miki:health_95"]
+                }
+            },
+            "miki:add_health_96": {
+                "add": {
+                    "component_groups": ["miki:health_96"]
+                }
+            },
+            "miki:add_health_97": {
+                "add": {
+                    "component_groups": ["miki:health_97"]
+                }
+            },
+            "miki:add_health_98": {
+                "add": {
+                    "component_groups": ["miki:health_98"]
+                }
+            },
+            "miki:add_health_99": {
+                "add": {
+                    "component_groups": ["miki:health_99"]
+                }
+            },
+            "miki:add_health_100": {
+                "add": {
+                    "component_groups": ["miki:health_100"]
+                }
+            },
+            "miki:add_attack_damage_1": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_1"]
+                }
+            },
+            "miki:add_attack_damage_2": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_2"]
+                }
+            },
+            "miki:add_attack_damage_3": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_3"]
+                }
+            },
+            "miki:add_attack_damage_4": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_4"]
+                }
+            },
+            "miki:add_attack_damage_5": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_5"]
+                }
+            },
+            "miki:add_attack_damage_6": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_6"]
+                }
+            },
+            "miki:add_attack_damage_7": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_7"]
+                }
+            },
+            "miki:add_attack_damage_8": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_8"]
+                }
+            },
+            "miki:add_attack_damage_9": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_9"]
+                }
+            },
+            "miki:add_attack_damage_10": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_10"]
+                }
+            },
+            "miki:add_attack_damage_11": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_11"]
+                }
+            },
+            "miki:add_attack_damage_12": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_12"]
+                }
+            },
+            "miki:add_attack_damage_13": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_13"]
+                }
+            },
+            "miki:add_attack_damage_14": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_14"]
+                }
+            },
+            "miki:add_attack_damage_15": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_15"]
+                }
+            },
+            "miki:add_attack_damage_16": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_16"]
+                }
+            },
+            "miki:add_attack_damage_17": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_17"]
+                }
+            },
+            "miki:add_attack_damage_18": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_18"]
+                }
+            },
+            "miki:add_attack_damage_19": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_19"]
+                }
+            },
+            "miki:add_attack_damage_20": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_20"]
+                }
+            },
+            "miki:add_attack_damage_21": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_21"]
+                }
+            },
+            "miki:add_attack_damage_22": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_22"]
+                }
+            },
+            "miki:add_attack_damage_23": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_23"]
+                }
+            },
+            "miki:add_attack_damage_24": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_24"]
+                }
+            },
+            "miki:add_attack_damage_25": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_25"]
+                }
+            },
+            "miki:add_attack_damage_26": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_26"]
+                }
+            },
+            "miki:add_attack_damage_27": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_27"]
+                }
+            },
+            "miki:add_attack_damage_28": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_28"]
+                }
+            },
+            "miki:add_attack_damage_29": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_29"]
+                }
+            },
+            "miki:add_attack_damage_30": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_30"]
+                }
+            },
+            "miki:add_attack_damage_31": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_31"]
+                }
+            },
+            "miki:add_attack_damage_32": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_32"]
+                }
+            },
+            "miki:add_attack_damage_33": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_33"]
+                }
+            },
+            "miki:add_attack_damage_34": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_34"]
+                }
+            },
+            "miki:add_attack_damage_35": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_35"]
+                }
+            },
+            "miki:add_attack_damage_36": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_36"]
+                }
+            },
+            "miki:add_attack_damage_37": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_37"]
+                }
+            },
+            "miki:add_attack_damage_38": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_38"]
+                }
+            },
+            "miki:add_attack_damage_39": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_39"]
+                }
+            },
+            "miki:add_attack_damage_40": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_40"]
+                }
+            },
+            "miki:add_attack_damage_41": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_41"]
+                }
+            },
+            "miki:add_attack_damage_42": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_42"]
+                }
+            },
+            "miki:add_attack_damage_43": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_43"]
+                }
+            },
+            "miki:add_attack_damage_44": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_44"]
+                }
+            },
+            "miki:add_attack_damage_45": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_45"]
+                }
+            },
+            "miki:add_attack_damage_46": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_46"]
+                }
+            },
+            "miki:add_attack_damage_47": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_47"]
+                }
+            },
+            "miki:add_attack_damage_48": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_48"]
+                }
+            },
+            "miki:add_attack_damage_49": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_49"]
+                }
+            },
+            "miki:add_attack_damage_50": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_50"]
+                }
+            },
+            "miki:add_attack_damage_51": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_51"]
+                }
+            },
+            "miki:add_attack_damage_52": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_52"]
+                }
+            },
+            "miki:add_attack_damage_53": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_53"]
+                }
+            },
+            "miki:add_attack_damage_54": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_54"]
+                }
+            },
+            "miki:add_attack_damage_55": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_55"]
+                }
+            },
+            "miki:add_attack_damage_56": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_56"]
+                }
+            },
+            "miki:add_attack_damage_57": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_57"]
+                }
+            },
+            "miki:add_attack_damage_58": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_58"]
+                }
+            },
+            "miki:add_attack_damage_59": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_59"]
+                }
+            },
+            "miki:add_attack_damage_60": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_60"]
+                }
+            },
+            "miki:add_attack_damage_61": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_61"]
+                }
+            },
+            "miki:add_attack_damage_62": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_62"]
+                }
+            },
+            "miki:add_attack_damage_63": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_63"]
+                }
+            },
+            "miki:add_attack_damage_64": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_64"]
+                }
+            },
+            "miki:add_attack_damage_65": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_65"]
+                }
+            },
+            "miki:add_attack_damage_66": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_66"]
+                }
+            },
+            "miki:add_attack_damage_67": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_67"]
+                }
+            },
+            "miki:add_attack_damage_68": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_68"]
+                }
+            },
+            "miki:add_attack_damage_69": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_69"]
+                }
+            },
+            "miki:add_attack_damage_70": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_70"]
+                }
+            },
+            "miki:add_attack_damage_71": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_71"]
+                }
+            },
+            "miki:add_attack_damage_72": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_72"]
+                }
+            },
+            "miki:add_attack_damage_73": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_73"]
+                }
+            },
+            "miki:add_attack_damage_74": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_74"]
+                }
+            },
+            "miki:add_attack_damage_75": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_75"]
+                }
+            },
+            "miki:add_attack_damage_76": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_76"]
+                }
+            },
+            "miki:add_attack_damage_77": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_77"]
+                }
+            },
+            "miki:add_attack_damage_78": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_78"]
+                }
+            },
+            "miki:add_attack_damage_79": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_79"]
+                }
+            },
+            "miki:add_attack_damage_80": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_80"]
+                }
+            },
+            "miki:add_attack_damage_81": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_81"]
+                }
+            },
+            "miki:add_attack_damage_82": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_82"]
+                }
+            },
+            "miki:add_attack_damage_83": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_83"]
+                }
+            },
+            "miki:add_attack_damage_84": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_84"]
+                }
+            },
+            "miki:add_attack_damage_85": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_85"]
+                }
+            },
+            "miki:add_attack_damage_86": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_86"]
+                }
+            },
+            "miki:add_attack_damage_87": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_87"]
+                }
+            },
+            "miki:add_attack_damage_88": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_88"]
+                }
+            },
+            "miki:add_attack_damage_89": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_89"]
+                }
+            },
+            "miki:add_attack_damage_90": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_90"]
+                }
+            },
+            "miki:add_attack_damage_91": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_91"]
+                }
+            },
+            "miki:add_attack_damage_92": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_92"]
+                }
+            },
+            "miki:add_attack_damage_93": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_93"]
+                }
+            },
+            "miki:add_attack_damage_94": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_94"]
+                }
+            },
+            "miki:add_attack_damage_95": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_95"]
+                }
+            },
+            "miki:add_attack_damage_96": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_96"]
+                }
+            },
+            "miki:add_attack_damage_97": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_97"]
+                }
+            },
+            "miki:add_attack_damage_98": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_98"]
+                }
+            },
+            "miki:add_attack_damage_99": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_99"]
+                }
+            },
+            "miki:add_attack_damage_100": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_100"]
+                }
+            },
+            "minecraft:gain_raid_omen": {
+                "add": {
+                    "component_groups": ["minecraft:add_raid_omen"]
+                }
+            },
+            "minecraft:clear_add_raid_omen": {
+                "remove": {
+                    "component_groups": ["minecraft:add_raid_omen"]
+                },
+                "add": {
+                    "component_groups": ["minecraft:clear_raid_omen_spell_effect"]
+                }
+            },
+            "minecraft:trigger_raid": {
+                "add": {
+                    "component_groups": ["minecraft:raid_trigger"]
+                }
+            },
+            "minecraft:remove_raid_trigger": {
+                "remove": {
+                    "component_groups": ["minecraft:raid_trigger"]
+                }
+            }
+        }
+    }
+}

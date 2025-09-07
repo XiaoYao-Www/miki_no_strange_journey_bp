@@ -1,26 +1,31 @@
 import { system, world } from "@minecraft/server";
 /**
- * 玩家遍歷訂閱（靜態單例）
+ * 玩家遍歷訂閱（不同間隔共用同一個 runInterval，使用 Map 管理）
  */
 export class PlayerInterval {
-    static callBackList = [];
-    static intervalNumber;
+    static groups = new Map();
     /**
      * 訂閱
      * @param callBack 回調函式
+     * @param interval 間隔 tick（預設 1）
      */
-    static subscribe(callBack) {
-        if (!this.callBackList.includes(callBack)) {
-            this.callBackList.push(callBack);
-        }
-        if (this.intervalNumber === undefined) {
-            this.intervalNumber = system.runInterval(() => {
-                for (const callBackFunction of this.callBackList) {
+    static subscribe(callBack, interval = 1) {
+        let group = this.groups.get(interval);
+        if (group === undefined) {
+            const callbacks = [];
+            const handle = system.runInterval(() => {
+                for (const fn of callbacks) {
                     for (const player of world.getAllPlayers()) {
-                        callBackFunction(player);
+                        fn(player);
                     }
                 }
-            });
+            }, interval);
+            group = { handle, callbacks };
+            this.groups.set(interval, group);
+        }
+        // 避免重複註冊
+        if (!group.callbacks.includes(callBack)) {
+            group.callbacks.push(callBack);
         }
     }
     /**
@@ -28,12 +33,16 @@ export class PlayerInterval {
      * @param callBack 回調函式
      */
     static unsubscribe(callBack) {
-        const index = this.callBackList.indexOf(callBack);
-        if (index !== -1) {
-            this.callBackList.splice(index, 1);
-            if (this.callBackList.length < 1 && this.intervalNumber !== undefined) {
-                system.clearRun(this.intervalNumber);
-                this.intervalNumber = undefined;
+        for (const [interval, group] of this.groups.entries()) {
+            const index = group.callbacks.indexOf(callBack);
+            if (index !== -1) {
+                group.callbacks.splice(index, 1);
+                // 如果這個 group 沒人用了，就清掉
+                if (group.callbacks.length === 0) {
+                    system.clearRun(group.handle);
+                    this.groups.delete(interval);
+                }
+                return;
             }
         }
     }
