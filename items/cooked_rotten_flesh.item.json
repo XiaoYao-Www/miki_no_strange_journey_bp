@@ -4,8 +4,8 @@
 		"description": {
 			"identifier": "miki:cooked_rotten_flesh",
 			"menu_category": {
-				"category": "nature",
-				"group": "itemGroup.name.crop"
+				"category": "equipment",
+				"group": "itemGroup.name.cookedFood"
 			}
 		},
 		"components": {
