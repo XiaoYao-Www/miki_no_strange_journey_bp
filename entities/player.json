@@ -9,6 +9,11 @@
         },
 
         "component_groups": {
+            "miki:movement_speed_0": {
+                "minecraft:movement": {
+                    "value": 0
+                }
+            },
             "miki:movement_speed_1": {
                 "minecraft:movement": {
                     "value": 0.01
@@ -1109,6 +1114,11 @@
                     "max": 100
                 }
             },
+            "miki:attack_damage_0": {
+                "minecraft:attack": {
+                    "damage": 0
+                }
+            },
             "miki:attack_damage_1": {
                 "minecraft:attack": {
                     "damage": 1
@@ -1771,6 +1781,7 @@
             "miki:remove_custom_value": {
                 "remove": {
                     "component_groups": [
+                        "miki:movement_speed_0",
                         "miki:movement_speed_1",
                         "miki:movement_speed_2",
                         "miki:movement_speed_3",
@@ -1973,6 +1984,7 @@
                         "miki:health_99",
                         "miki:health_100",
 
+                        "miki:attack_damage_0",
                         "miki:attack_damage_1",
                         "miki:attack_damage_2",
                         "miki:attack_damage_3",
@@ -2074,6 +2086,11 @@
                         "miki:attack_damage_99",
                         "miki:attack_damage_100"
                     ]
+                }
+            },
+            "miki:add_movement_speed_0": {
+                "add": {
+                    "component_groups": ["miki:movement_speed_0"]
                 }
             },
             "miki:add_movement_speed_1": {
@@ -3079,6 +3096,11 @@
             "miki:add_health_100": {
                 "add": {
                     "component_groups": ["miki:health_100"]
+                }
+            },
+            "miki:add_attack_damage_0": {
+                "add": {
+                    "component_groups": ["miki:attack_damage_0"]
                 }
             },
             "miki:add_attack_damage_1": {

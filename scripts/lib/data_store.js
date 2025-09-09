@@ -40,3 +40,16 @@ system.runInterval(() => {
         }
     });
 }, MaintainInterval_m * 1200);
+/**
+ * 生物死亡回收資料
+ */
+world.afterEvents.entityRemove.subscribe(signal => {
+    if (signal.typeId !== "minecraft:player")
+        EntityStore.delete(signal.removedEntityId);
+});
+/**
+ * 玩家退出回收資料
+ */
+world.afterEvents.playerLeave.subscribe(signal => {
+    EntityStore.delete(signal.playerId);
+});

@@ -9,3 +9,4 @@ import "./core/player_maintain.js"; // 玩家維護
 import "./core/chopping_board.js"; // 砧板
 import "./core/accessory_settings_system.js"; // 飾品設定
 import "./core/combat_system.js"; // 戰鬥系統
+import "./core/weapon_skill_use.js"; // 武器技能使用
