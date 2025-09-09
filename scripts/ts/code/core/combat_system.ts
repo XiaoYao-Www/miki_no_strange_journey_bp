@@ -4,29 +4,32 @@
 import { Player, world } from "@minecraft/server";
 import { getPlayerDataStore } from "../lib/data_store.js";
 import { AccessoryFeaturesData } from "../lib/accessory_features_data.js";
+import { UFLib } from "../lib/uflib/uflib_core.js";
 
 /**
  * 實體受傷事件
  */
 world.afterEvents.entityHurt.subscribe(signal => {
-    // 飾品效果 - 攻擊實體後觸發
+    // 玩家攻擊
     if (signal.damageSource.damagingEntity?.typeId === "minecraft:player") {
         const attackPlayerData = getPlayerDataStore(signal.damageSource.damagingEntity.id);
+        // 飾品效果 - 攻擊實體後觸發
         for (const value of Object.values(attackPlayerData.accessory_slot)) {
             if (value === undefined) continue;
             const feature = AccessoryFeaturesData[value];
-            if (feature.afterHitEntity) {
+            if (feature.afterHitEntity !== undefined) {
                 feature.afterHitEntity(signal.damageSource.damagingEntity as Player, signal.hurtEntity, signal.damage, signal.damageSource.cause);
             }
         }
     }
-    // 飾品效果 - 受傷後觸發
+    // 玩家受傷
     if (signal.hurtEntity.typeId === "minecraft:player") {
         const hurtPlayerData = getPlayerDataStore(signal.hurtEntity.id);
+        // 飾品效果 - 受傷後觸發
         for (const value of Object.values(hurtPlayerData.accessory_slot)) {
             if (value === undefined) continue;
             const feature = AccessoryFeaturesData[value];
-            if (feature.afterHurt) {
+            if (feature.afterHurt !== undefined) {
                 feature.afterHurt(signal.hurtEntity as Player, signal.damage, signal.damageSource.cause, signal.damageSource.damagingEntity);
             }
         }
@@ -43,7 +46,7 @@ world.afterEvents.entityDie.subscribe(signal => {
         for (const value of Object.values(attackPlayerData.accessory_slot)) {
             if (value === undefined) continue;
             const feature = AccessoryFeaturesData[value];
-            if (feature.afterKillEntity) {
+            if (feature.afterKillEntity !== undefined) {
                 feature.afterKillEntity(signal.damageSource.damagingEntity as Player, signal.deadEntity, signal.damageSource.cause);
             }
         }
