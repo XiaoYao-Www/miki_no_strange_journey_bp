@@ -1,0 +1,11 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "miki:raw_bison_slice_cooked"
+    },
+    "tags": ["furnace", "smoker", "campfire", "soul_campfire"],
+    "input": { "item": "miki:raw_bison_slice" },
+    "output": "miki:cooked_bison_slice"
+  }
+}

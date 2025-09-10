@@ -13,10 +13,6 @@
 			"minecraft:icon": {
 				"texture": "raw_bison_slice"
 			},
-			"minecraft:enchantable": {
-				"slot": "sword",
-				"value": 1
-			},
 			"minecraft:food": {
 				"nutrition": 2,
 				"saturation_modifier": 0.3
