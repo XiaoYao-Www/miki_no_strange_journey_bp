@@ -1,0 +1,36 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "miki:chopping_board"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "AAA",
+            "BBB"
+        ],
+        "key": {
+            "A": {
+                "item": "minecraft:log",
+                "data": 0
+            },
+            "B": {
+                "item": "minecraft:wooden_slab",
+                "data": 0
+            }
+        },
+        "unlock": [
+            {
+              "item": "minecraft:log"
+            },{
+                "item": "minecraft:wooden_slab"
+            }
+          ],
+        "result": {
+            "item": "miki:chopping_board",
+            "count": 1
+        }
+    }
+}

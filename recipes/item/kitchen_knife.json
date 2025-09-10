@@ -1,0 +1,36 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "miki:kitchen_knife"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "A",
+            "B"
+        ],
+        "key": {
+            "A": {
+                "item": "minecraft:iron_ingot",
+                "data": 0
+            },
+            "B": {
+                "item": "minecraft:stick",
+                "data": 0
+            }
+        },
+        "unlock": [
+            {
+              "item": "minecraft:iron_ingot"
+            },{
+                "item": "minecraft:stick"
+            }
+          ],
+        "result": {
+            "item": "miki:kitchen_knife",
+            "count": 1
+        }
+    }
+}

@@ -10,5 +10,8 @@ export const AccessoryFeaturesData: {[key: string]: AccessoryFeatures} = {
         afterHitEntity(player, target, damageValue, cause) {
             player.addEffect("minecraft:speed", TicksPerSecond * 1, {amplifier: 4, showParticles: false});
         },
+    },
+    "miki:ring_of_swiftness": {
+        speed: 1,
     }
 }

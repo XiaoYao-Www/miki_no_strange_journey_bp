@@ -1,0 +1,44 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "miki:accessory_settings"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "AAA",
+            "BCB",
+            "AAA"
+        ],
+        "key": {
+            "A": {
+                "item": "minecraft:leather",
+                "data": 0
+            },
+            "B": {
+                "item": "minecraft:string",
+                "data": 0
+            },
+            "C": {
+                "item": "minecraft:bundle"
+            }
+        },
+        "unlock": [
+            {
+                "item": "minecraft:leather"
+            },
+            {
+                "item": "minecraft:string"
+            },
+            {
+                "item": "minecraft:bundle"
+            }
+        ],
+        "result": {
+            "item": "miki:accessory_settings",
+            "count": 1
+        }
+    }
+}
