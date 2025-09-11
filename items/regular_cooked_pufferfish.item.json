@@ -1,0 +1,42 @@
+{
+	"format_version": "1.21.90",
+	"minecraft:item": {
+		"description": {
+			"identifier": "miki:regular_cooked_pufferfish",
+			"menu_category": {
+				"category": "equipment",
+				"group": "minecraft:itemGroup.name.cookedFood"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:icon": {
+				"texture": "miki:regular_cooked_pufferfish_icon"
+			},
+			"minecraft:food": {
+				"nutrition": 2
+			},
+			"minecraft:use_modifiers": {
+				"movement_modifier": 0.32,
+				"use_duration": 1.6
+			},
+			"minecraft:use_animation": "eat",
+			"miki:food_effect": [
+				[
+                    {
+                        "name": "poison",
+                        "duration": 30,
+                        "amplifier": 1,
+						"show_particles": false
+                    },
+                    {
+                        "name": "nausea",
+                        "duration": 15,
+                        "amplifier": 0,
+						"show_particles": false
+                    }
+                ]
+			]
+		}
+	}
+}
