@@ -1,19 +1,20 @@
 /**
  * 初始化任務定義在這
  */
-import { DimensionTypes, system, world } from "@minecraft/server";
+import { DimensionTypes, system, TicksPerSecond, world } from "@minecraft/server";
 import { getPlayerDataStore } from "../lib/data_store.js";
 /**
  * 遊戲系統啟動前
  */
 system.beforeEvents.startup.subscribe(signal => {
     // 註冊自訂組件
-    // signal.blockComponentRegistry.registerCustomComponent("miki:inlay_workbench_place", {
-    //     onPlace(e){
-    //         let entity = e.dimension.spawnEntity("miki:inlay_workbench_table", UFLib.Vector3.sum(e.block.location, {x: 0.5, y: 1.1, z: 0.5}));
-    //         entity.nameTag = "miki:inlay_workbench_table";
-    //     }
-    // });
+    signal.itemComponentRegistry.registerCustomComponent("miki:food_effect", {
+        onCompleteUse({ source }, { params }) {
+            for (const { name, duration, amplifier, show_particles } of params) {
+                source.addEffect(name, duration * TicksPerSecond, { amplifier: amplifier, showParticles: show_particles });
+            }
+        },
+    });
 });
 /**
  * 世界載入後

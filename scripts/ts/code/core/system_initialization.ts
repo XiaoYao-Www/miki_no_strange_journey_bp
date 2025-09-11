@@ -1,9 +1,10 @@
 /**
  * 初始化任務定義在這
  */
-import { DimensionTypes, Player, system, world } from "@minecraft/server";
+import { DimensionTypes, Player, system, TicksPerSecond, world } from "@minecraft/server";
 import { UFLib } from "../lib/uflib/uflib_core.js";
 import { getPlayerDataStore } from "../lib/data_store.js";
+import { FoodEffectParams } from "../types/component_params_type.js";
 
 
 /**
@@ -11,12 +12,13 @@ import { getPlayerDataStore } from "../lib/data_store.js";
  */
 system.beforeEvents.startup.subscribe(signal => {
     // 註冊自訂組件
-    // signal.blockComponentRegistry.registerCustomComponent("miki:inlay_workbench_place", {
-    //     onPlace(e){
-    //         let entity = e.dimension.spawnEntity("miki:inlay_workbench_table", UFLib.Vector3.sum(e.block.location, {x: 0.5, y: 1.1, z: 0.5}));
-    //         entity.nameTag = "miki:inlay_workbench_table";
-    //     }
-    // });
+    signal.itemComponentRegistry.registerCustomComponent("miki:food_effect", {
+        onCompleteUse({ source }, { params }) {
+            for (const { name, duration, amplifier, show_particles } of params as FoodEffectParams[]) {
+                source.addEffect(name, duration * TicksPerSecond, { amplifier: amplifier, showParticles: show_particles });
+            }
+        },
+    });
 });
 
 /**
