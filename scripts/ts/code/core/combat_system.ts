@@ -17,7 +17,7 @@ world.afterEvents.entityHurt.subscribe(signal => {
         for (const value of Object.values(attackPlayerData.accessory_slot)) {
             if (value === undefined) continue;
             const feature = AccessoryFeaturesData[value];
-            if (feature.afterHitEntity !== undefined) {
+            if (feature?.afterHitEntity !== undefined) {
                 feature.afterHitEntity(signal.damageSource.damagingEntity as Player, signal.hurtEntity, signal.damage, signal.damageSource.cause);
             }
         }
@@ -29,7 +29,7 @@ world.afterEvents.entityHurt.subscribe(signal => {
         for (const value of Object.values(hurtPlayerData.accessory_slot)) {
             if (value === undefined) continue;
             const feature = AccessoryFeaturesData[value];
-            if (feature.afterHurt !== undefined) {
+            if (feature?.afterHurt !== undefined) {
                 feature.afterHurt(signal.hurtEntity as Player, signal.damage, signal.damageSource.cause, signal.damageSource.damagingEntity);
             }
         }
@@ -46,7 +46,7 @@ world.afterEvents.entityDie.subscribe(signal => {
         for (const value of Object.values(attackPlayerData.accessory_slot)) {
             if (value === undefined) continue;
             const feature = AccessoryFeaturesData[value];
-            if (feature.afterKillEntity !== undefined) {
+            if (feature?.afterKillEntity !== undefined) {
                 feature.afterKillEntity(signal.damageSource.damagingEntity as Player, signal.deadEntity, signal.damageSource.cause);
             }
         }

@@ -15,7 +15,7 @@ world.afterEvents.itemStartUse.subscribe(signal => {
             if (value === undefined)
                 continue;
             const feature = AccessoryFeaturesData[value];
-            if (feature.beforeUseItemSkill !== undefined) {
+            if (feature?.beforeUseItemSkill !== undefined) {
                 feature.beforeUseItemSkill(signal.source, signal.itemStack);
             }
         }
@@ -42,7 +42,7 @@ world.afterEvents.itemStopUse.subscribe(signal => {
             if (value === undefined)
                 continue;
             const feature = AccessoryFeaturesData[value];
-            if (feature.afterUseItemSkill !== undefined) {
+            if (feature?.afterUseItemSkill !== undefined) {
                 feature.afterUseItemSkill(signal.source, signal.itemStack);
             }
         }
