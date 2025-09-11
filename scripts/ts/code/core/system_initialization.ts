@@ -14,7 +14,7 @@ system.beforeEvents.startup.subscribe(signal => {
     // 註冊自訂組件
     signal.itemComponentRegistry.registerCustomComponent("miki:food_effect", {
         onCompleteUse({ source }, { params }) {
-            for (const { name, duration, amplifier, show_particles } of params as FoodEffectParams[]) {
+            for (const { name, duration, amplifier, show_particles } of (params as FoodEffectParams[])) {
                 source.addEffect(name, duration * TicksPerSecond, { amplifier: amplifier, showParticles: show_particles });
             }
         },
