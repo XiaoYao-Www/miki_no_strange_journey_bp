@@ -21,6 +21,9 @@ export interface PlayerDataStore {
         amulet_slot: string | undefined,
         special_slot: string | undefined,
         relic_slot: string | undefined,
+    },
+    flag: {
+        relic_of_eternal_night_day: boolean, // 永夜的白天狀態
     }
 }
 
@@ -53,6 +56,9 @@ export function getPlayerDataStore(playerId: string): PlayerDataStore {
                 amulet_slot: undefined,
                 special_slot: undefined,
                 relic_slot: undefined,
+            },
+            flag: {
+                relic_of_eternal_night_day: false,
             }
         };
         EntityStore.set(playerId, data);

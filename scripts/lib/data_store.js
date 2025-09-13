@@ -22,6 +22,9 @@ export function getPlayerDataStore(playerId) {
                 amulet_slot: undefined,
                 special_slot: undefined,
                 relic_slot: undefined,
+            },
+            flag: {
+                relic_of_eternal_night_day: false,
             }
         };
         EntityStore.set(playerId, data);

@@ -1,13 +1,37 @@
 /**
  * 玩家基本維護
  */
-import { system } from "@minecraft/server";
+import { system, TicksPerSecond, world } from "@minecraft/server";
 import { AccessoryFeaturesData } from "../lib/accessory_features_data.js";
 import { getPlayerDataStore } from "../lib/data_store.js";
 import { PeriodicEffectManager } from "../lib/periodic_effect_manager.js";
 import { PlayerInterval } from "../lib/player_interval.js";
 import { UFLib } from "../lib/uflib/uflib_core.js";
 import { TimeManager } from "../lib/time_manager.js";
+
+
+function getDayTransitionValue(tick: number): number {
+    // 確保 tick 在 0~23999 之間
+    tick = ((tick % 24000) + 24000) % 24000;
+
+    // 清晨漸進 (22300~22800) → 0 到 1
+    if (tick >= 22300 && tick < 22800) {
+        return ((tick - 22300) / (22800 - 22300));
+    }
+
+    // 白天 (22800~11600) → 1
+    if (tick >= 22800 || tick < 11600) {
+        return 1;
+    }
+
+    // 傍晚漸減 (11600~13800) → 1 到 0
+    if (tick >= 11600 && tick < 13800) {
+        return 1 - ((tick - 11600) / (13800 - 11600));
+    }
+
+    // 其他時候 (夜晚) → 0
+    return 0;
+}
 
 
 PlayerInterval.subscribe(player => {
@@ -42,6 +66,16 @@ PlayerInterval.subscribe(player => {
                 PeriodicEffectManager.setEffect(player.id, effect);
             }
         }
+        /*
+            永夜權杖特殊效果
+        */
+        if (value == "miki:relic_of_eternal_night"){
+            const time = world.getTimeOfDay();
+            const transitionValue = getDayTransitionValue(time);
+            health -= Math.round(transitionValue * 10);
+            attack += Math.round((1 - transitionValue) * 3);
+            playerData.flag.relic_of_eternal_night_day = (time >= 22300 || time < 13800); // 白天旗標
+        }
     }
 
     // 應用基本屬性值
@@ -54,6 +88,11 @@ PlayerInterval.subscribe(player => {
     player.triggerEvent(`miki:add_movement_speed_${speed.toString()}`); // 移動速度
     player.triggerEvent(`miki:add_health_${health.toString()}`); // 生命值
     player.triggerEvent(`miki:add_attack_damage_${attack.toString()}`); // 攻擊力
+    // 免死狀態處理
+    let lethal_target = false;
+    if ((playerData.accessory_slot.relic_slot == "miki:relic_of_eternal_night") && (playerData.flag.relic_of_eternal_night_day)) lethal_target = true;
+    if (lethal_target && !player.hasTag("miki:lethal_immunity")) player.addTag("miki:lethal_immunity");
+    else if (!lethal_target && player.hasTag("miki:lethal_immunity")) player.removeTag("miki:lethal_immunity");
 });
 
 system.afterEvents.scriptEventReceive.subscribe(signal => {
@@ -63,7 +102,13 @@ system.afterEvents.scriptEventReceive.subscribe(signal => {
                 玩家觸發免死
             */
             if(signal.sourceEntity === undefined || signal.sourceEntity.typeId != "minecraft:player") return;
-            UFLib.Game.sendMessage("test");
+            const playerData = getPlayerDataStore(signal.sourceEntity.id);
+            // 永夜權杖效果
+            if ((playerData.accessory_slot.relic_slot == "miki:relic_of_eternal_night") && (playerData.flag.relic_of_eternal_night_day)){
+                signal.sourceEntity.addEffect("minecraft:regeneration", 10 * TicksPerSecond, {amplifier: 2, showParticles: false});
+                TimeManager.setTask(18000, {changeTime: 400, delayTick: 1});
+                return;
+            }
             break;
         
         case "miki:set_time":

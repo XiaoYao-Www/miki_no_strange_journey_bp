@@ -37,5 +37,6 @@ export const AccessoryFeaturesData = {
                 interval: TicksPerSecond * 15
             }
         ]
-    }
+    },
+    "miki:relic_of_eternal_night": {}
 };

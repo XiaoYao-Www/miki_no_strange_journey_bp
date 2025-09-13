@@ -55,6 +55,9 @@ export class TimeManager {
     }
     /**
      * 添加任務
+     * @param targetTime 目標時間
+     * @param timeChange 時間變化參數
+     * @returns 添加結果
      */
     static addTask(targetTime, timeChange) {
         // 目標時間校正
@@ -65,6 +68,37 @@ export class TimeManager {
         // 參數檢查
         if (timeChange.changeTime === 0 || timeChange.delayTick < 0)
             return false;
+        this.taskList.push({
+            target: targetTime,
+            timeChange: timeChange,
+            currentTicks: world.getTimeOfDay(),
+            tickCounter: 0,
+        });
+        return true;
+    }
+    /**
+     * 清除所有任務
+     */
+    static clearTaskList() {
+        this.taskList.length = 0;
+    }
+    /**
+     * 強制設定任務(清空任務列表)
+     * @param targetTime 目標時間
+     * @param timeChange 時間變化
+     * @returns 添加結果
+     */
+    static setTask(targetTime, timeChange) {
+        // 目標時間校正
+        if (targetTime >= 24000)
+            targetTime -= 24000;
+        else if (targetTime < 0)
+            targetTime += 24000;
+        // 參數檢查
+        if (timeChange.changeTime === 0 || timeChange.delayTick < 0)
+            return false;
+        // 任務設定
+        this.clearTaskList();
         this.taskList.push({
             target: targetTime,
             timeChange: timeChange,

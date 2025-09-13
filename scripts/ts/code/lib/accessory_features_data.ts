@@ -40,5 +40,8 @@ export const AccessoryFeaturesData: {[key: string]: AccessoryFeatures} = {
                 interval: TicksPerSecond * 15
             }
         ]
+    },
+    "miki:relic_of_eternal_night":{
+        
     }
 }
