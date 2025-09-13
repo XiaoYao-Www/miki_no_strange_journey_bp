@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "miki:relic_of_eternal_night",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "relic_of_eternal_night"
+			},
+			"minecraft:tags": {
+				"tags": [
+					"miki:accessory_relic"
+				]
+			}
+		}
+	}
+}

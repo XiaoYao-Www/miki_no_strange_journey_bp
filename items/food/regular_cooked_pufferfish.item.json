@@ -23,21 +23,19 @@
 			},
             "minecraft:use_animation": "eat",
             "miki:food_effect" : [
-				[
-					{
-						"name": "minecraft:poison",
-						"duration" : 15,
-						"amplifier" : 1,
-						"show_particles": false
-                	},
-					{
-						"name": "minecraft:nausea",
-						"duration" : 7,
-						"amplifier" : 1,
-						"show_particles": false
-					}
-				]
-            ]
+				{
+					"name": "minecraft:poison",
+					"duration" : 15,
+					"amplifier" : 1,
+					"show_particles": false
+				},
+				{
+					"name": "minecraft:nausea",
+					"duration" : 7,
+					"amplifier" : 1,
+					"show_particles": false
+				}
+			]
 		}
 	}
 }
