@@ -1,11 +1,13 @@
 /**
  * 玩家基本維護
  */
+import { system } from "@minecraft/server";
 import { AccessoryFeaturesData } from "../lib/accessory_features_data.js";
 import { getPlayerDataStore } from "../lib/data_store.js";
 import { PeriodicEffectManager } from "../lib/periodic_effect_manager.js";
 import { PlayerInterval } from "../lib/player_interval.js";
 import { UFLib } from "../lib/uflib/uflib_core.js";
+import { TimeManager } from "../lib/time_manager.js";
 
 
 PlayerInterval.subscribe(player => {
@@ -52,7 +54,28 @@ PlayerInterval.subscribe(player => {
     player.triggerEvent(`miki:add_movement_speed_${speed.toString()}`); // 移動速度
     player.triggerEvent(`miki:add_health_${health.toString()}`); // 生命值
     player.triggerEvent(`miki:add_attack_damage_${attack.toString()}`); // 攻擊力
+});
 
-    // 定期效果更新
-    PeriodicEffectManager.update();
+system.afterEvents.scriptEventReceive.subscribe(signal => {
+    switch (signal.id) {
+        case "miki:lethal_target":
+            /*
+                玩家觸發免死
+            */
+            if(signal.sourceEntity === undefined || signal.sourceEntity.typeId != "minecraft:player") return;
+            UFLib.Game.sendMessage("test");
+            break;
+        
+        case "miki:set_time":
+            /*
+                設定時間
+            */
+           if(!signal.message) return
+           UFLib.Game.sendMessage(TimeManager.addTask(parseInt(signal.message), {changeTime: 350, delayTick: 1}) ? "true": "false");
+           break;
+    
+        default:
+            UFLib.Game.sendMessage(`API事件 ${signal.id} 不存在`);
+            break;
+    }
 });

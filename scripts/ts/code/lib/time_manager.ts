@@ -13,51 +13,115 @@ export interface TimeTask {
 
 export class TimeManager {
     private static readonly taskList: TimeTask[] = [];
+
     /**
      * 運行更新
      */
     static update(): void {
         if (this.taskList.length < 1) return;
-        // 任務處理
+
         const task: TimeTask = this.taskList[0];
-        // delay 處理
+
+        // delay處理
         task.tickCounter--;
         if (task.tickCounter > 0) return;
-        // 時間運算處理
-        task.currentTicks += task.timeChange.changeTime;
-        //// 時間校正
-        task.currentTicks = ((task.currentTicks % 24000) + 24000) % 24000;
-        //// 時間超過校正
-        if (
-            (task.timeChange.changeTime > 0 &&
-                task.currentTicks >= task.target) ||
-            (task.timeChange.changeTime < 0 && task.currentTicks <= task.target)
-        ) {
+
+        const step = task.timeChange.changeTime;
+        let next = task.currentTicks + step;
+
+        // 繞回校正（保持 0~23999）
+        next = ((next % 24000) + 24000) % 24000;
+
+        // 判斷是否到達目標
+        if (next === task.target) {
             task.currentTicks = task.target;
+            world.setTimeOfDay(task.currentTicks);
+            this.taskList.shift(); // 任務完成
+            return;
         }
-        //// 時間書寫
+
+        // 判斷是否「跨過目標」
+        if (step > 0) {
+            // 正向推進，若 current < target <= next，則到達
+            if (
+                (task.currentTicks < task.target && task.target <= next) ||
+                (task.currentTicks > next &&
+                    (task.target > task.currentTicks || task.target <= next)) // 跨越0點情況
+            ) {
+                task.currentTicks = task.target;
+                world.setTimeOfDay(task.currentTicks);
+                this.taskList.shift();
+                return;
+            }
+        } else {
+            // 反向推進，若 current > target >= next，則到達
+            if (
+                (task.currentTicks > task.target && task.target >= next) ||
+                (task.currentTicks < next &&
+                    (task.target < task.currentTicks || task.target >= next)) // 跨越0點情況
+            ) {
+                task.currentTicks = task.target;
+                world.setTimeOfDay(task.currentTicks);
+                this.taskList.shift();
+                return;
+            }
+        }
+
+        // 還沒到 → 繼續推進
+        task.currentTicks = next;
         world.setTimeOfDay(task.currentTicks);
-        //// 任務結束檢查
-        if (task.currentTicks == task.target) this.taskList.shift();
-        else task.tickCounter = task.timeChange.delayTick;
+        task.tickCounter = task.timeChange.delayTick;
     }
 
     /**
      * 添加任務
+     * @param targetTime 目標時間 
+     * @param timeChange 時間變化參數
+     * @returns 添加結果
      */
     static addTask(targetTime: number, timeChange: TimeTaskChange): boolean {
         // 目標時間校正
         if (targetTime >= 24000) targetTime -= 24000;
         else if (targetTime < 0) targetTime += 24000;
-        // 變動參數檢查
-        if (timeChange.changeTime == 0 || timeChange.delayTick < 0)
-            return false;
-        // 添加任務
+
+        // 參數檢查
+        if (timeChange.changeTime === 0 || timeChange.delayTick < 0) return false;
+
         this.taskList.push({
             target: targetTime,
             timeChange: timeChange,
             currentTicks: world.getTimeOfDay(),
-            tickCounter: 0
+            tickCounter: 0,
+        });
+        return true;
+    }
+
+    /**
+     * 清除所有任務
+     */
+    static clearTaskList(): void{
+        this.taskList.length = 0;
+    }
+
+    /**
+     * 強制設定任務(清空任務列表)
+     * @param targetTime 目標時間
+     * @param timeChange 時間變化
+     * @returns 添加結果
+     */
+    static setTask(targetTime: number, timeChange: TimeTaskChange): boolean{
+        // 目標時間校正
+        if (targetTime >= 24000) targetTime -= 24000;
+        else if (targetTime < 0) targetTime += 24000;
+        // 參數檢查
+        if (timeChange.changeTime === 0 || timeChange.delayTick < 0) return false;
+        // 任務設定
+        this.clearTaskList();
+        this.taskList.push({
+            target: targetTime,
+            timeChange: timeChange,
+            currentTicks: world.getTimeOfDay(),
+            tickCounter: 0,
         });
         return true;
     }

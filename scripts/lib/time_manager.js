@@ -7,32 +7,51 @@ export class TimeManager {
     static update() {
         if (this.taskList.length < 1)
             return;
-        // 任務處理
         const task = this.taskList[0];
-        // delay 處理
+        // delay處理
         task.tickCounter--;
         if (task.tickCounter > 0)
             return;
-        // 時間運算處理
-        task.currentTicks += task.timeChange.changeTime;
-        //// 時間校正
-        if (task.currentTicks >= 24000)
-            task.currentTicks -= 24000;
-        else if (task.currentTicks < 0)
-            task.currentTicks += 24000;
-        //// 時間超過校正
-        if (task.timeChange.changeTime > 0 && task.currentTicks > task.target)
+        const step = task.timeChange.changeTime;
+        let next = task.currentTicks + step;
+        // 繞回校正（保持 0~23999）
+        next = ((next % 24000) + 24000) % 24000;
+        // 判斷是否到達目標
+        if (next === task.target) {
             task.currentTicks = task.target;
-        else if (task.timeChange.changeTime < 0 &&
-            task.currentTicks < task.target)
-            task.currentTicks = task.target;
-        //// 時間書寫
+            world.setTimeOfDay(task.currentTicks);
+            this.taskList.shift(); // 任務完成
+            return;
+        }
+        // 判斷是否「跨過目標」
+        if (step > 0) {
+            // 正向推進，若 current < target <= next，則到達
+            if ((task.currentTicks < task.target && task.target <= next) ||
+                (task.currentTicks > next &&
+                    (task.target > task.currentTicks || task.target <= next)) // 跨越0點情況
+            ) {
+                task.currentTicks = task.target;
+                world.setTimeOfDay(task.currentTicks);
+                this.taskList.shift();
+                return;
+            }
+        }
+        else {
+            // 反向推進，若 current > target >= next，則到達
+            if ((task.currentTicks > task.target && task.target >= next) ||
+                (task.currentTicks < next &&
+                    (task.target < task.currentTicks || task.target >= next)) // 跨越0點情況
+            ) {
+                task.currentTicks = task.target;
+                world.setTimeOfDay(task.currentTicks);
+                this.taskList.shift();
+                return;
+            }
+        }
+        // 還沒到 → 繼續推進
+        task.currentTicks = next;
         world.setTimeOfDay(task.currentTicks);
-        //// 任務結束檢查
-        if (task.currentTicks == task.target)
-            this.taskList.shift();
-        else
-            task.tickCounter = task.timeChange.delayTick;
+        task.tickCounter = task.timeChange.delayTick;
     }
     /**
      * 添加任務
@@ -43,10 +62,9 @@ export class TimeManager {
             targetTime -= 24000;
         else if (targetTime < 0)
             targetTime += 24000;
-        // 變動參數檢查
-        if (timeChange.changeTime == 0 || timeChange.delayTick < 0)
+        // 參數檢查
+        if (timeChange.changeTime === 0 || timeChange.delayTick < 0)
             return false;
-        // 添加任務
         this.taskList.push({
             target: targetTime,
             timeChange: timeChange,
