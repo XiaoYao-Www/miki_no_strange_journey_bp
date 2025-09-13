@@ -1774,10 +1774,49 @@
                     },
                     "event": "minecraft:gain_raid_omen"
                 }
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "has_tag",
+                                        "subject": "self",
+                                        "value": "miki:damage_immunity"
+                                    }
+                                ]
+                            }
+                        },
+                        "deals_damage": false
+                    },{
+                        "on_damage": {
+                            "filters": [
+                                {
+                                    "test": "has_tag",
+                                    "subject": "self",
+                                    "value": "miki:lethal_immunity"
+                                },{
+                                    "test": "has_damage",
+                                    "subject": "self",
+                                    "value": "fatal"
+                                }
+                            ],
+                            "event": "miki:lethal_target"
+                        },
+                        "deals_damage": false
+                    }
+                ]
             }
         },
 
         "events": {
+            "miki:lethal_target":{
+                "queue_command": {
+                    "command": "scriptevent miki:lethal_target"
+                }
+            },
             "miki:remove_custom_value": {
                 "remove": {
                     "component_groups": [

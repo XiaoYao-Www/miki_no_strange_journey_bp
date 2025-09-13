@@ -52,4 +52,7 @@ PlayerInterval.subscribe(player => {
     player.triggerEvent(`miki:add_movement_speed_${speed.toString()}`); // 移動速度
     player.triggerEvent(`miki:add_health_${health.toString()}`); // 生命值
     player.triggerEvent(`miki:add_attack_damage_${attack.toString()}`); // 攻擊力
+
+    // 定期效果更新
+    PeriodicEffectManager.update();
 });

@@ -19,20 +19,7 @@
                 "movement_modifier": 0.32,
                 "use_duration": 1.6
             },
-            "minecraft:use_animation": "eat",
-            "miki:food_effect": [
-                {
-                    "name": "minecraft:poison",
-                    "duration": 5,
-                    "amplifier": 1,
-                    "show_particles": false
-                },{
-                    "name": "minecraft:speed",
-                    "duration": 5,
-                    "amplifier": 1,
-                    "show_particles": false
-                }
-            ]
+            "minecraft:use_animation": "eat"
         }
 	}
 }
