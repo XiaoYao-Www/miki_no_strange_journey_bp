@@ -1,0 +1,31 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "myname:codex_of_eternal_day",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.sword"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "codex_of_eternal_day"
+			},
+			"minecraft:damage": 1,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:durability": {
+				"max_durability": 1565
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": ["book"],
+						"repair_amount": 78
+					}
+				]
+			}
+		}
+	}
+}
