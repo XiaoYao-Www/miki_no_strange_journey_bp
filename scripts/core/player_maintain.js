@@ -71,7 +71,14 @@ PlayerInterval.subscribe(player => {
             const transitionValue = getDayTransitionValue(time);
             health -= Math.round(transitionValue * 10);
             attack += Math.round((1 - transitionValue) * 3);
-            playerData.flag.relic_of_eternal_night_day = (time >= 22300 || time < 13800); // 白天旗標
+            if (time >= 22300 || time < 13800) {
+                playerData.flag.relic_of_eternal_night_day = true; // 白天旗標
+            }
+            else {
+                playerData.flag.relic_of_eternal_night_day = false;
+                if (playerData.flag.relic_of_eternal_night_transform)
+                    playerData.flag.relic_of_eternal_night_transform = false;
+            }
         }
     }
     // 應用基本屬性值
@@ -103,9 +110,17 @@ system.afterEvents.scriptEventReceive.subscribe(signal => {
                 return;
             const playerData = getPlayerDataStore(signal.sourceEntity.id);
             // 永夜權杖效果
-            if ((playerData.accessory_slot.relic_slot == "miki:relic_of_eternal_night") && (playerData.flag.relic_of_eternal_night_day)) {
-                signal.sourceEntity.addEffect("minecraft:regeneration", 10 * TicksPerSecond, { amplifier: 2, showParticles: false });
+            if ((playerData.accessory_slot.relic_slot == "miki:relic_of_eternal_night") &&
+                (playerData.flag.relic_of_eternal_night_day) &&
+                !playerData.flag.relic_of_eternal_night_transform) {
+                // 特效
+                signal.sourceEntity.dimension.playSound("miki.eternal_night_immortality_trigger", signal.sourceEntity.location, { volume: 16 });
+                signal.sourceEntity.dimension.spawnParticle("miki:eternal_night_immortality_trigger_1", signal.sourceEntity.location);
+                signal.sourceEntity.dimension.spawnParticle("miki:eternal_night_immortality_trigger_2", signal.sourceEntity.location);
+                // 能力
+                signal.sourceEntity.addEffect("minecraft:absorption", 5 * TicksPerSecond, { amplifier: 2, showParticles: false });
                 TimeManager.setTask(18000, { changeTime: 400, delayTick: 1 });
+                playerData.flag.relic_of_eternal_night_transform = true;
                 return;
             }
             break;

@@ -25,6 +25,7 @@ export function getPlayerDataStore(playerId) {
             },
             flag: {
                 relic_of_eternal_night_day: false,
+                relic_of_eternal_night_transform: false,
             }
         };
         EntityStore.set(playerId, data);

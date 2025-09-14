@@ -43,38 +43,43 @@ PlayerInterval.subscribe(player => {
 
     // 飾品處理
     for (const value of Object.values(playerData.accessory_slot)) {
-        if(value === undefined) continue;
+        if (value === undefined) continue;
         const feature = AccessoryFeaturesData[value];
-        if(feature === undefined) continue;
+        if (feature === undefined) continue;
         // 飾品加成基本屬性質
-        if(feature.speed !== undefined) speed += feature.speed;
-        if(feature.health !== undefined) health += feature.health;
-        if(feature.strength !== undefined) attack += feature.strength;
+        if (feature.speed !== undefined) speed += feature.speed;
+        if (feature.health !== undefined) health += feature.health;
+        if (feature.strength !== undefined) attack += feature.strength;
         // 常駐效果
-        if(feature.passiveEffects !== undefined){
-            for(const effect of feature.passiveEffects){
-                if(effect.type === "vanilla"){
-                    player.addEffect(effect.name, 3, {amplifier: effect.amplifier ?? 0, showParticles: false});
-                }else{
+        if (feature.passiveEffects !== undefined) {
+            for (const effect of feature.passiveEffects) {
+                if (effect.type === "vanilla") {
+                    player.addEffect(effect.name, 3, { amplifier: effect.amplifier ?? 0, showParticles: false });
+                } else {
                     // 自定義效果還沒完成系統
                 }
             }
         }
         // 定期效果
-        if(feature.periodicEffects !== undefined){
-            for(const effect of feature.periodicEffects){
+        if (feature.periodicEffects !== undefined) {
+            for (const effect of feature.periodicEffects) {
                 PeriodicEffectManager.setEffect(player.id, effect);
             }
         }
         /*
             永夜權杖特殊效果
         */
-        if (value == "miki:relic_of_eternal_night"){
+        if (value == "miki:relic_of_eternal_night") {
             const time = world.getTimeOfDay();
             const transitionValue = getDayTransitionValue(time);
             health -= Math.round(transitionValue * 10);
             attack += Math.round((1 - transitionValue) * 3);
-            playerData.flag.relic_of_eternal_night_day = (time >= 22300 || time < 13800); // 白天旗標
+            if (time >= 22300 || time < 13800) {
+                playerData.flag.relic_of_eternal_night_day = true; // 白天旗標
+            } else {
+                playerData.flag.relic_of_eternal_night_day = false;
+                if (playerData.flag.relic_of_eternal_night_transform) playerData.flag.relic_of_eternal_night_transform = false;
+            }
         }
     }
 
@@ -101,24 +106,33 @@ system.afterEvents.scriptEventReceive.subscribe(signal => {
             /*
                 玩家觸發免死
             */
-            if(signal.sourceEntity === undefined || signal.sourceEntity.typeId != "minecraft:player") return;
+            if (signal.sourceEntity === undefined || signal.sourceEntity.typeId != "minecraft:player") return;
             const playerData = getPlayerDataStore(signal.sourceEntity.id);
             // 永夜權杖效果
-            if ((playerData.accessory_slot.relic_slot == "miki:relic_of_eternal_night") && (playerData.flag.relic_of_eternal_night_day)){
-                signal.sourceEntity.addEffect("minecraft:regeneration", 10 * TicksPerSecond, {amplifier: 2, showParticles: false});
-                TimeManager.setTask(18000, {changeTime: 400, delayTick: 1});
+            if ((playerData.accessory_slot.relic_slot == "miki:relic_of_eternal_night") &&
+                (playerData.flag.relic_of_eternal_night_day) &&
+                !playerData.flag.relic_of_eternal_night_transform
+            ) {
+                // 特效
+                signal.sourceEntity.dimension.playSound("miki.eternal_night_immortality_trigger", signal.sourceEntity.location, {volume: 16});
+                signal.sourceEntity.dimension.spawnParticle("miki:eternal_night_immortality_trigger_1", signal.sourceEntity.location);
+                signal.sourceEntity.dimension.spawnParticle("miki:eternal_night_immortality_trigger_2", signal.sourceEntity.location);
+                // 能力
+                signal.sourceEntity.addEffect("minecraft:absorption", 5 * TicksPerSecond, { amplifier: 2, showParticles: false });
+                TimeManager.setTask(18000, { changeTime: 400, delayTick: 1 });
+                playerData.flag.relic_of_eternal_night_transform = true;
                 return;
             }
             break;
-        
+
         case "miki:set_time":
             /*
                 設定時間
             */
-           if(!signal.message) return
-           UFLib.Game.sendMessage(TimeManager.addTask(parseInt(signal.message), {changeTime: 350, delayTick: 1}) ? "true": "false");
-           break;
-    
+            if (!signal.message) return
+            UFLib.Game.sendMessage(TimeManager.addTask(parseInt(signal.message), { changeTime: 350, delayTick: 1 }) ? "true" : "false");
+            break;
+
         default:
             UFLib.Game.sendMessage(`API事件 ${signal.id} 不存在`);
             break;

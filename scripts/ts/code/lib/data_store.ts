@@ -24,6 +24,7 @@ export interface PlayerDataStore {
     },
     flag: {
         relic_of_eternal_night_day: boolean, // 永夜的白天狀態
+        relic_of_eternal_night_transform: boolean // 永夜轉換標記
     }
 }
 
@@ -59,6 +60,7 @@ export function getPlayerDataStore(playerId: string): PlayerDataStore {
             },
             flag: {
                 relic_of_eternal_night_day: false,
+                relic_of_eternal_night_transform: false,
             }
         };
         EntityStore.set(playerId, data);
